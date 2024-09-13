@@ -25,8 +25,8 @@ export default function Hero(){
                     </label>
                     <button className="rounded-lg bg-det border-none text-white text-lg w-20">Cerca</button>
                 </div>
-                <div className='flex justify-center'>
-                    <img src={bannerImg} alt="header" className='w-72'/>
+                <div className='flex justify-center xl:-my-20 xl:py-1 md:-my-3'>
+                    <img src={bannerImg} alt="header" className='xl:w-96 md:w-80'/>
                 </div>
             </div>
             <div className="bg-banner w-8/12 xl:h-auto md:h-auto h-auto rounded-e-3xl">

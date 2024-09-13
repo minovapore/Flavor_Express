@@ -35,7 +35,7 @@
   
   .scroll-track {
     display: flex;
-    animation: scroll 5s linear infinite; /* Animazione lineare e infinita */
+    animation: scroll 20s linear infinite; /* Animazione lineare e infinita */
   }
   
   .scroll-item {
@@ -61,4 +61,10 @@
     100% {
       transform: translateX(-50%);     /* Termina a metà, poiché abbiamo duplicato gli elementi */
     }
+  }
+
+
+  .border-custom{
+    border: 5px solid var(--det-color);
+    ;
   }
