@@ -1,0 +1,64 @@
+.bg-banner{
+    background-image: url(../assets/img/banner.png);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width:768px){
+    .bg-banner{
+        background-image: url(../assets/img/banner.png);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .bg-banner{
+        background-image: url(../assets/img/banner.png);
+        background-position: cover;
+        background-position: center;
+    }
+}
+
+.scroll-container {
+    overflow: hidden;  /* Nasconde qualsiasi parte dell'elemento che esce fuori dai limiti */
+    width: 100%;       /* Imposta la larghezza massima del contenitore */
+    height: 250px;     /* Altezza totale per contenere immagini e testo */
+    position: relative;
+  }
+
+  .scroll-content {
+    display: flex;
+    align-items: center;
+    width: 200%; /* Doppia larghezza per il contenuto duplicato */
+  }  
+  
+  .scroll-track {
+    display: flex;
+    animation: scroll 5s linear infinite; /* Animazione lineare e infinita */
+  }
+  
+  .scroll-item {
+    flex: 0 0 auto; /* Gli elementi non si ridimensionano */
+    width: 400px; /* Larghezza degli elementi */
+    height: 100%;
+  }
+  
+  .scroll-image {
+    height: 220px;
+    width: 1500px;
+  }
+  
+  .scroll-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);        /* Inizio dell'animazione */
+    }
+    100% {
+      transform: translateX(-50%);     /* Termina a metà, poiché abbiamo duplicato gli elementi */
+    }
+  }

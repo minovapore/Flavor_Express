@@ -1,0 +1,52 @@
+:root{
+    --det-color: #ff3c00;
+    --sec-color: #1f37f0;
+    --acc-color: #ffffff;
+}
+
+/* colore testo */
+.txt-det{
+    color: var(--det-color);
+}
+
+.txt-sec{
+    color: var(--sec-color);
+}
+
+.txt-acc{
+    color: var(--acc-color);
+}
+
+/* colore bg */
+.bg-det{
+    background-color: var(--det-color);
+}
+
+.bg-sec{
+    background-color: var(--sec-color);
+}
+
+.bg-acc{
+    background-color: var(--acc-color);
+}
+
+.bord{
+    border: 3px solid #1f37f0;
+}
+
+.bord:hover{
+    border: 3px solid white;
+    background-color: #1f37f0;
+    color: #ffffff;
+}
+
+.bord2{
+    border: 3px solid white;
+}
+
+.bord2:hover{
+    border: 3px solid #1f37f0;
+    background-color: white;
+    color: #1f37f0;
+}
+
