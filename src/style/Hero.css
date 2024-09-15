@@ -6,7 +6,7 @@
 
 @media screen and (min-width:768px){
     .bg-banner{
-        background-image: url(../assets/img/banner.png);
+        background-image: url(../assets/img/hero-img.jpg);
         background-size: cover;
         background-position: center;
     }
@@ -23,7 +23,6 @@
 .scroll-container {
     overflow: hidden;  /* Nasconde qualsiasi parte dell'elemento che esce fuori dai limiti */
     width: 100%;       /* Imposta la larghezza massima del contenitore */
-    height: 250px;     /* Altezza totale per contenere immagini e testo */
     position: relative;
   }
 
@@ -63,8 +62,30 @@
     }
   }
 
+  .sushi-bg{
+    background-image: url(../assets/img/sushi.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    /* background-size: 500px; */
+    }
 
-  .border-custom{
-    border: 5px solid var(--det-color);
-    ;
+  .burger-an{
+    /* background-image: url(../assets/img/burger.png);
+    background-repeat: no-repeat; */
+    animation: movimentoAltoBasso 2s infinite alternate;
+    
+  }
+
+  @keyframes movimentoAltoBasso {
+    0% {
+        transform: translateY(0); /* Posizione iniziale */
+    }
+    100% {
+        transform: translateY(30px); /* Sposta di 100px in basso */
+    }
+}
+
+  .txt-border{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
   }

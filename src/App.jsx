@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Food from './components/Food'
-import Hero from './components/Hero'
+import Hero2 from './components/Hero2'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
   return (
     <>
      <Navbar toggleCartVisibility={toggleCartVisibility}/>
-     <Hero/>
-     {/* <Food isCartVisible={isCartVisible}/> */}
+     <Hero2/>
+     <Food isCartVisible={isCartVisible}/>
     </>
   )
 }

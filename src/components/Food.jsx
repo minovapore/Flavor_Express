@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 // import {BsStarHalf, BsStarFill, BsCart} from "react-icons/bs";
 import {products} from '../product.js';
+import panino from '../assets/img/panino.png';
+import '../style/Food.css';
 
 export default function Food({isCartVisible}){
     let fromLocalStorage;
@@ -86,27 +88,21 @@ export default function Food({isCartVisible}){
                     })}
                 </div>
             )}
-            <h2 className="text-3xl p-4 w-full text-start">Food</h2>
+            {/* <h2 className="text-3xl p-4 w-full text-start">Food</h2>
             <div className="grid xl:grid-cols-3 place-items-center gap-6">
             {products.map(product => (
                 <div key={product.id} className="w-[380px] p-5 bg-white rounded-lg transition-all duration-200 hover:scale-110">
                     <img className="rounded-lg w-[400px] h-[220px] object-cover" src={product.image} alt="img" />
-                    <div className="flex flex-rpw justify-between items-center mt-5 gap-3">
+                    <div className="flex flex-row justify-evenly items-center mt-5 gap-3">
                         <h2 className="font-semibold text-xl">{product.name}</h2>
-                        <div className="flex">
-                            <li>ciao</li>
-                            <li>ciao</li>
-                            <li>ciao</li>
-                            <li>ciao</li>
-                            <li>ciao</li>
-                        </div>
                         <h3 className="font-semibold text-lg">{product.price}€</h3>
-                        <button onClick={() => {addToCart(product.id)}} className="p-3 text-2xl w-14 rounded-xl bg-primary">Aggiungi</button>
+                        <button onClick={() => {addToCart(product.id)}} className="p-2 text-2xl w-14 rounded-xl bg-primary">Aggiungi</button> */}
                         {/* {cartItems[product.id] > 0 && <div className='absolute flex items-center justify-center top-5 left-5 bg-green-600 font-bold rounded-lg h-12 w-12 '>{cartItems[product.id]}</div>} */}
-                    </div>
+                    {/* </div>
                 </div>
             ))}
-            </div>
+            </div> */}
+
         </div>
     );
 }

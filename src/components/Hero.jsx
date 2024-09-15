@@ -31,7 +31,7 @@ export default function Hero(){
             </div>
             <div className="bg-banner w-8/12 xl:h-auto md:h-auto h-auto rounded-e-3xl">
                 <div className='flex justify-center xl:mt-16 md:mt-16 mt-3'>
-                    <h2 className='font-bold xl:text-6xl md:text-6xl text-3xl text-center'>FLAVOR <br /> EXPRESS</h2>
+                    <h2 className='font-archivio font-bold xl:text-6xl md:text-6xl text-3xl text-center'>flavor <br /> express</h2>
                 </div>
                 <p className='text-center xl:p-5 md:p-5 my-4 px-1 font-semibold xl:text-2xl md:text-2xl text-sm'>Flavor Express è un servizio di food delivery che offre piatti freschi e gustosi, con consegne rapide a domicilio, combinando cucina locale e internazionale per ogni esigenza.</p>
                 <div className='xl:flex md:flex justify-center gap-20 my-5 hidden'>
