@@ -14,7 +14,7 @@ function App() {
     <>
      <Navbar toggleCartVisibility={toggleCartVisibility}/>
      <Hero2/>
-     <Food isCartVisible={isCartVisible}/>
+     {/* <Food isCartVisible={isCartVisible}/> */}
     </>
   )
 }

@@ -1,0 +1,12 @@
+.btn-custom {
+    height: 3rem /* 48px */;
+    width: 3rem /* 48px */;
+    border-radius: 9999px;
+    padding: 0px;
+    background-color: var(--det-color);
+    border: none;
+}
+
+.btn-custom:hover{
+    background-color: var(--det-color);
+}

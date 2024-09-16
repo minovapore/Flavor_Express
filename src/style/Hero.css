@@ -1,5 +1,5 @@
 .bg-banner{
-    background-image: url(../assets/img/banner.png);
+    background-image: url(../assets/img/hero-img.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -14,7 +14,7 @@
 
 @media screen and (max-width:767px) {
     .bg-banner{
-        background-image: url(../assets/img/banner.png);
+        background-image: url(../assets/img/hero-img.jpg);
         background-position: cover;
         background-position: center;
     }
@@ -69,11 +69,8 @@
     /* background-size: 500px; */
     }
 
-  .burger-an{
-    /* background-image: url(../assets/img/burger.png);
-    background-repeat: no-repeat; */
+  .animation{
     animation: movimentoAltoBasso 2s infinite alternate;
-    
   }
 
   @keyframes movimentoAltoBasso {
@@ -81,11 +78,20 @@
         transform: translateY(0); /* Posizione iniziale */
     }
     100% {
-        transform: translateY(30px); /* Sposta di 100px in basso */
+        transform: translateY(20px); /* Sposta di 100px in basso */
     }
 }
 
   .txt-border{
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: var(--sec-color);
   }
+
+  .txt-border2{
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: var(--det-color);
+  }
+
+  
+
+  
