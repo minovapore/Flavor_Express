@@ -1,12 +1,16 @@
 .btn-custom {
-    height: 3rem /* 48px */;
-    width: 3rem /* 48px */;
-    border-radius: 9999px;
-    padding: 0px;
-    background-color: var(--det-color);
-    border: none;
+    height: 3rem !important;
+    width: 3rem !important;
+    border-radius: 9999px !important;
+    padding: 0px !important;
+    background-color: var(--det-color) !important;
+    border: none !important;
 }
 
 .btn-custom:hover{
     background-color: var(--det-color);
+}
+
+.bord-card-carousel{
+    border: 2px solid var(--det-color);
 }

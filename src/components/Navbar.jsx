@@ -5,14 +5,14 @@ import logo from '../assets/img/logo.png';
 export default function Navbar({toggleCartVisibility}){
 
     return(
-        <div className="navbar bg-none text-black w-full">
+        <div className="navbar bg-det txt-sec w-full">
         <div className="navbar-start">
             <div className="ms-5">
             <img src={logo} alt="Flavor Express" className='w-40 z-auto'/>
             </div>
         </div>
         <div className="navbar-center hidden lg:flex md:flex">
-          <ul className="font-oddval txt-det menu menu-horizontal text-lg xl:gap-32 md:gap-24">
+          <ul className="font-oddval menu menu-horizontal text-lg xl:gap-32 md:gap-24">
               <li>item 1</li>
               <li>item 2</li>
               <li>item 3</li>

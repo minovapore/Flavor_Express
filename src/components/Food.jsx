@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 // import {BsStarHalf, BsStarFill, BsCart} from "react-icons/bs";
 import {products} from '../product.js';
-import panino from '../assets/img/panino.png';
 import '../style/Food.css';
 
 export default function Food({isCartVisible}){

@@ -1,70 +1,35 @@
 import '../style/Hero.css';
 import '../style/Global.css';
-import bannerImg from '../assets/img/banner-img.png';
-import InfiniteScroll from './InfiniteScroll';
+import InfiniteScroll from './InfiniteScroll'
+import burger from '../assets/img/burger.png';
+import pizza from '../assets/img/pizza.png'
+import Carousel from './Carousel';
 
 export default function Hero(){
     return(
         <>
-        <div className=" w-11/12 mx-auto xl:h-[500px] md:h-[500px] h-[250px] my-5 text-white xl:flex md:flex xl:flex-row md:flex-row col col-span-2">
-            <div className="bg-sec xl:w-5/12 md:w-5/12 xl:h-auto md:h-auto h-auto xl:rounded-s-3xl md:rounded-s-3xl xl:block md:block hidden">
-                <h2 className='text-center font-bold xl:text-3xl md:text-3xl text-xl xl:mt-16 md:mt-16 mt-3'>Cerca il tuo piatto</h2>
-                <div className="text-black flex justify-center gap-2 my-5">
-                    <label className="input input-bordered flex items-center justify-center gap-2 xl:w-[400px] md:w-[250px] w-[135px] xl:h-[50px] md:h-[50px] h-[30px]">
-                        <input type="text" className="grow xl:text-lg md:text-lg xl:ms-0 md:ms-0 ms-20" placeholder="Cerca..." />
-                            <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 16 16"
-                            fill="currentColor"
-                            className="h-5 w-5 opacity-70">
-                            <path
-                            fillRule="evenodd"
-                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                            clipRule="evenodd" />
-                            </svg>
-                    </label>
-                    <button className="rounded-lg bg-det border-none text-white text-lg w-20">Cerca</button>
+        <div className="bg-banner xl:h-[650px] md:h-[500px] h-[250px] text-white xl:flex md:flex xl:flex-row md:flex-row col col-span-2">
+           <h2 className='flex items-center mx-auto xl:text-9xl md:text-8xl text-4xl text-center font-archivio txt-det'>FLAVOR EXPRESS</h2>
+        </div>
+        <div className='bg-det relative h-[650px]'>
+            <InfiniteScroll/>
+            <div className='relative w-full h-[600px]'>
+                <div className='absolute inset-0 z-0 animation'>
+                    <img src={burger} alt="" className='object-cover xl:my-0 md:my-20 xl:w-[250px] md:w-[250px] w-[150px]'/>
+                    <img src={pizza} alt="" className='object-cover ml-auto xl:-my-32 md:-my-64 my-48 rotate-12 me-9 xl:w-[350px] md:w-[300px] w-[150px]'/>
                 </div>
-                <div className='flex justify-center xl:-my-20 xl:py-1 md:-my-3'>
-                    <img src={bannerImg} alt="header" className='xl:w-96 md:w-80'/>
-                </div>
-            </div>
-            <div className="bg-banner w-8/12 xl:h-auto md:h-auto h-auto rounded-e-3xl">
-                <div className='flex justify-center xl:mt-16 md:mt-16 mt-3'>
-                    <h2 className='font-archivio font-bold xl:text-6xl md:text-6xl text-3xl text-center'>flavor <br /> express</h2>
-                </div>
-                <p className='text-center xl:p-5 md:p-5 my-4 px-1 font-semibold xl:text-2xl md:text-2xl text-sm'>Flavor Express è un servizio di food delivery che offre piatti freschi e gustosi, con consegne rapide a domicilio, combinando cucina locale e internazionale per ogni esigenza.</p>
-                <div className='xl:flex md:flex justify-center gap-20 my-5 hidden'>
-                    <button className='rounded-xl bg-sec bord2 text-white w-32 h-12 text-lg'>Registrati</button>
-                    <button className='rounded-xl bg-acc bord txt-sec w-32 h-12 text-lg'>Accedi</button>
-                </div>
-            </div>
-            {/* mobile-version */}
-            <div className="bg-sec xl:w-5/12 md:w-5/12 xl:h-auto md:h-auto h-[150px] xl:rounded-s-3xl md:rounded-s-3xl xl:hidden md:hidden rounded-3xl flex justify-center">
-            <div>
-            <h2 className='text-center font-bold xl:text-3xl md:text-3xl text-2xl xl:mt-16 md:mt-16 mt-3'>Cerca il tuo piatto</h2>
-                <div className="text-black flex justify-center gap-2 my-5 ms-3">
-                    <label className="input input-bordered flex items-center justify-center gap-2 xl:w-[400px] md:w-[250px] w-[175px] xl:h-[50px] md:h-[50px] h-[30px]">
-                        <input type="text" className="grow xl:text-lg md:text-lg xl:ms-0 md:ms-0 ms-5" placeholder="Cerca..." />
-                    </label>
-                    <button className="rounded-lg bg-det border-none text-white text-lg w-8 flex justify-center items-center  text-center"><svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 16 16"
-                            fill="currentColor"
-                            className="h-5 w-5 opacity-70">
-                            <path
-                            fillRule="evenodd"
-                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                            clipRule="evenodd" />
-                            </svg></button>
-                </div>
-            </div>
-                <div className='flex justify-center items-center mx-3'>
-                    <img src={bannerImg} alt="header" className='w-32 h-32'/>
-                </div>
+                <h2 className='absolute inset-0 flex justify-center xl:my-14 md:my-14 my-14 xl:text-6xl md:text-6xl text-5xl font-archivio z-10 txt-border txt-det'>CHI SIAMO</h2>
+                <p className='absolute inset-0 flex justify-center items-center xl:mt-0 md:mt-24 mt-0 xl:text-4xl md:text-4xl text-2xl xl:w-9/12 md:w-9/12 text-center font-oddval mx-auto z-10'>Flavor Express è un servizio di food delivery che offre piatti freschi e gustosi, con consegne rapide a domicilio, combinando cucina locale e internazionale per ogni esigenza.  Che tu voglia una cena gourmet o un pasto veloce, Flavor Express garantisce un'esperienza culinaria comoda e gustosa, senza rinunciare alla comodità di mangiare a casa.</p>
             </div>
         </div>
-        <InfiniteScroll/>
+        <div className='w-full h-[650px] bg-sec'>
+        <h2 className='txt-border2 txt-sec flex justify-center text-center xl:text-6xl md:text-6xl font-archivio'>PRONTO A SODDISFARE LA TUA FAME?</h2>
+        <p className='txt-det flex justify-center text-3xl font-archivio text-center my-5'>Flavor Express consiste in un menù interessante e vario</p>
+            <Carousel/>
+        <div className='flex justify-center'>
+        <a href="/menù" className='text-xl font-oddval font-semibold txt-sec'><button className='btn w-32 rounded-full btn-order'>Ordina</button></a>
+        </div>
+        </div>
         </>
     );
 }

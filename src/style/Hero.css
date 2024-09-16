@@ -92,6 +92,9 @@
     -webkit-text-stroke-color: var(--det-color);
   }
 
-  
+  .btn-order{
+    background-color: var(--det-color) !important;
+    border: none;
+  }
 
   
