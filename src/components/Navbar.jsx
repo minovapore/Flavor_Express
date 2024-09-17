@@ -22,7 +22,7 @@ export default function Navbar({toggleCartVisibility}){
             <div>
             <button className="me-5" onClick={toggleCartVisibility}>carrello</button>
             </div>
-            <div className="btn btn-ghost xl:hidden md:hidden" onClick={()=>document.getElementById('my_modal_2').showModal()}>
+            <div className="btn btn-ghost xl:hidden md:hidden" onClick={()=>document.getElementById('my_modal_85').showModal()}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -36,7 +36,7 @@ export default function Navbar({toggleCartVisibility}){
               d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </div>
-          <dialog id="my_modal_2" className="modal">
+          <dialog id="my_modal_85" className="modal">
             <div className="modal-box bg-det text-white text-center grid grid-cols-2 rounded-2xl">
               <ul tabIndex="0" className='text-start ms-5'>
                 <li>Menù</li>

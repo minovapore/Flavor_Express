@@ -74,7 +74,7 @@ export default function Food({isCartVisible}){
     return(
         <div className="bg-sec txt-det max-w-[1600px] place-items-center lg:mx-auto flex flex-col gap-12">
             {/* Bottoni di navigazione */}
-            <div className="flex gap-8 justify-center my-10 font-oddval text-xl">
+            <div className="sticky top-0  z-10 bg-sec w-full py-5 flex gap-8 justify-center my-2 font-oddval text-xl">
                 {categories.map(category => (
                     <button
                     key={category}
@@ -106,6 +106,7 @@ export default function Food({isCartVisible}){
             )}
 
             {/* Rendi dinamica la creazione delle sezioni per ogni categoria */}
+            <div className="mb-10">
             {categories.map(category => (
                 <CategorySection
                 key={category}
@@ -114,6 +115,7 @@ export default function Food({isCartVisible}){
                 addToCart={addToCart}
                 />
             ))}
+            </div>
         </div>
     );
 }
