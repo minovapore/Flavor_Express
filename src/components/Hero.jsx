@@ -27,7 +27,7 @@ export default function Hero(){
         <p className='txt-det flex justify-center text-3xl font-archivio text-center my-5'>Flavor Express consiste in un menù interessante e vario</p>
             <Carousel/>
         <div className='flex justify-center'>
-        <a href="/menù" className='text-xl font-oddval font-semibold txt-sec'><button className='btn w-32 rounded-full btn-order'>Ordina</button></a>
+        <a href="/menù"><button className='btn w-32 rounded-full btn-order text-xl font-oddval font-semibold txt-sec'>Ordina</button></a>
         </div>
         </div>
         </>

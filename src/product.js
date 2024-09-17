@@ -1,5 +1,6 @@
-export const products = [
+export const products = {
     // Pizze
+    pizze: [
     {   id: 1, 
         name: "Margherita", 
         description: "Pizza classica con pomodoro e mozzarella", 
@@ -96,8 +97,9 @@ export const products = [
         category: "Pizze", 
         price: 9.50 
     },
-  
+],  
     // Panini
+    panini: [
     {   id: 13, 
         name: "Panino Classico", 
         description: "Panino con prosciutto e formaggio", 
@@ -194,8 +196,9 @@ export const products = [
         category: "Panini", 
         price: 5.50 
     },
-  
+],
     // Sushi
+    sushi: [
     {   id: 25, 
         name: "Sushi Nigiri", 
         description: "Nigiri con salmone fresco", 
@@ -292,8 +295,9 @@ export const products = [
         category: "Sushi", 
         price: 8.00 
     },
-  
+],
     // Frittura
+    fritti: [
     {   id: 37, 
         name: "Patatine Fritte", 
         description: "Classiche patatine fritte croccanti", 
@@ -390,8 +394,9 @@ export const products = [
         category: "Frittura", 
         price: 5.00 
     },
-  
+],
     // Dolci
+    dolci: [
     {   id: 49, 
         name: "Tiramisù", 
         description: "Dolce con mascarpone e caffè", 
@@ -488,8 +493,9 @@ export const products = [
         category: "Dolci", 
         price: 5.00 
     },
-  
+],
     // Insalate
+    insalate: [
     {   id: 61, 
         name: "Insalata Greca", 
         description: "Insalata con feta, pomodori e olive", 
@@ -586,8 +592,9 @@ export const products = [
         category: "Insalate", 
         price: 6.00 
     },
-  
+],
     // Bevande
+    bevande: [
     {   id: 73, 
         name: "Coca Cola", 
         description: "Bevanda gassata classica", 
@@ -684,5 +691,6 @@ export const products = [
         category: "Bevande", 
         price: 1.50 
     },
-];
+],
+};
   

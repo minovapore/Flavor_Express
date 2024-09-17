@@ -8,7 +8,7 @@ export default function Navbar({toggleCartVisibility}){
         <div className="navbar bg-det txt-sec w-full">
         <div className="navbar-start">
             <div className="ms-5">
-            <img src={logo} alt="Flavor Express" className='w-40 z-auto'/>
+            <a href="/"><img src={logo} alt="Flavor Express" className='w-40 z-auto'/></a>
             </div>
         </div>
         <div className="navbar-center hidden lg:flex md:flex">
