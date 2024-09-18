@@ -24,11 +24,14 @@ export default function CategorySection({category, items, addToCart}){
                 {items.map(item => (
                     <div key={item.id} className="w-[470px] h-[300px] p-2 bg-det txt-sec rounded-lg transition-all duration-200 hover:scale-110">
                         <a role="button" onClick={()=>document.getElementById(`my_modal_${item.id}`).showModal()}>
-                        <img className="rounded-lg w-[400px] h-[220px] object-cover" src={item.image} alt={item.name} />
-                        <div className="flex flex-row justify-center items-center mt-3">
+                            <div className="flex items-center justify-between bg-primary">
+                        <div className="bg-error">
                             <h2 className="font-semibold text-xl">{item.name}</h2>
-                            <h3 className="font-semibold text-lg mx-20">{item.price}€</h3>
-                            
+                            <h3 className="font-semibold text-lg">{item.price}€</h3>
+                        </div>
+                        <div className="flex justify-center items-center w-[250px] h-[200px] bg-info">
+                        <img className="rounded-lg mx-auto" src={item.image} alt={item.name} />
+                        </div>
                         </div>
                         <dialog key={item.id} id={`my_modal_${item.id}`} className="modal">
                             <div  className="modal-box">

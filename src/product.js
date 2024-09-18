@@ -1,3 +1,17 @@
+import classic from './assets/Panini/classic.png';
+import double from './assets/Panini/double.png';
+import avocadoChicken from './assets/Panini/avocado-chicken.png';
+import spicySriracha from './assets/Panini/spicy-sriracha.png';
+import pulledPork from './assets/Panini/pulled-pork.png';
+import mashroom from './assets/Panini/mashroom.png';
+import vegan from './assets/Panini/vegan.png';
+import fish from './assets/Panini/fish.png';
+import lamb from './assets/Panini/lamb.png';
+import buffaloChicken from './assets/Panini/buffalo-chicken.png';
+import turkey from './assets/Panini/turkey.png';
+import halloumi from './assets/Panini/halloumi.png';
+
+
 export const products = {
     // Pizze
     pizze: [
@@ -100,128 +114,141 @@ export const products = {
 ],  
     // Panini
     panini: [
-    {   id: 13, 
-        name: "Panino Classico", 
-        description: "Panino con prosciutto e formaggio", 
-        ingredients: ["Pane", "Prosciutto cotto", "Formaggio"], 
-        image: "panino_classico.jpg", 
-        category: "Panini", 
-        price: 4.50 
-    },
-    {   id: 14, 
-        name: "Panino con Salsiccia", 
-        description: "Panino con salsiccia e verdure", 
-        ingredients: ["Pane", "Salsiccia", "Verdure grigliate"], 
-        image: "panino_salsiccia.jpg", 
-        category: "Panini", 
-        price: 5.50 
-    },
-    {   id: 15, 
-        name: "Panino Caprese", 
-        description: "Panino con mozzarella e pomodoro", 
-        ingredients: ["Pane", "Mozzarella", "Pomodoro", "Basilico"], 
-        image: "panino_caprese.jpg", 
-        category: "Panini", 
-        price: 5.00 
-    },
-    {   id: 16, 
-        name: "Hamburger Classico", 
-        description: "Hamburger con carne di manzo e formaggio", 
-        ingredients: ["Pane", "Manzo", "Formaggio", "Insalata", "Pomodoro"], 
-        image: "hamburger_classico.jpg", 
-        category: "Panini", 
-        price: 6.50 
-    },
-    {   id: 17, 
-        name: "Hamburger Bacon", 
-        description: "Hamburger con carne, bacon e formaggio", 
-        ingredients: ["Pane", "Manzo", "Bacon", "Formaggio"], 
-        image: "hamburger_bacon.jpg", 
-        category: "Panini", 
-        price: 7.00 
-    },
-    {   id: 18, 
-        name: "Panino Vegano", 
-        description: "Panino con burger vegano e verdure", 
-        ingredients: ["Pane", "Burger vegano", "Verdure"], 
-        image: "panino_vegano.jpg", 
-        category: "Panini", 
-        price: 6.00 
-    },
-    {   id: 19, 
-        name: "Panino con Tonno", 
-        description: "Panino con tonno e maionese", 
-        ingredients: ["Pane", "Tonno", "Maionese", "Pomodoro"], 
-        image: "panino_tonno.jpg", 
-        category: "Panini", 
-        price: 5.50 
-    },
-    {   id: 20, 
-        name: "Panino con Pollo", 
-        description: "Panino con pollo grigliato e insalata", 
-        ingredients: ["Pane", "Pollo", "Insalata", "Maionese"], 
-        image: "panino_pollo.jpg", 
-        category: "Panini", 
-        price: 6.50 
-    },
-    {   id: 21, 
-        name: "Panino con Speck e Brie", 
-        description: "Panino con speck e brie fuso", 
-        ingredients: ["Pane", "Speck", "Brie"], 
-        image: "panino_speck_brie.jpg", 
-        category: "Panini", 
-        price: 7.00 
-    },
-    {   id: 22, 
-        name: "Panino con Tacchino", 
-        description: "Panino con tacchino e insalata", 
-        ingredients: ["Pane", "Tacchino", "Insalata", "Pomodoro"], 
-        image: "panino_tacchino.jpg", 
-        category: "Panini", 
-        price: 6.00 
-    },
-    {   id: 23, 
-        name: "Panino con Porchetta", 
-        description: "Panino con porchetta e salsa verde", 
-        ingredients: ["Pane", "Porchetta", "Salsa verde"], 
-        image: "panino_porchetta.jpg", 
-        category: "Panini", 
-        price: 7.50 
-    },
-    {   id: 24, 
-        name: "Panino con Zucchine e Melanzane", 
-        description: "Panino con verdure grigliate", 
-        ingredients: ["Pane", "Zucchine", "Melanzane", "Pesto"], 
-        image: "panino_zucchine_melanzane.jpg", 
-        category: "Panini", 
-        price: 5.50 
-    },
+    {
+        id: 13,
+        name: "Burger Classico di Manzo",
+        description: "Un burger tradizionale di manzo con ingredienti freschi e un sapore saporito.",
+        ingredients: ["Hamburger di Manzo", "Lattuga", "Pomodoro", "Cheddar", "Cetriolini", "Ketchup", "Panino al Sesamo"],
+        image: classic,
+        category: "Manzo",
+        price: 8.99
+        },
+        {
+        id: 14,
+        name: "Double Bacon Cheeseburger",
+        description: "Un burger abbondante con due hamburger di manzo, bacon e cheddar fuso.",
+        ingredients: ["Doppio Hamburger di Manzo", "Bacon", "Cheddar", "Maionese", "Salsa BBQ", "Cetroli", "Cipolla"],
+        image: double,
+        category: "Manzo",
+        price: 12.99
+        },
+        {
+        id: 15,
+        name: "Burger di Pollo e Avocado",
+        description: "Un burger di pollo alla griglia sano e delizioso con cremoso avocado.",
+        ingredients: ["Pollo fritto", "Avocado", "Cavolo rosso", "Pomodoro", "Cheddar"],
+        image: avocadoChicken,
+        category: "Chicken",
+        price: 9.49
+        },
+        {
+        id: 16,
+        name:  "Burger Piccante al Sriracha",
+        description: "Un burger di manzo audace e piccante con jalapeños e salsa sriracha per un gusto deciso.",
+        ingredients: ["Hamburger di Manzo", "Bacon", "Jalapeños", "Lattuga", "Salsa Sriracha", "Cipolla", "Formaggio svizzero", "Pomodoro"],
+        image: spicySriracha,
+        category: "Manzo",
+        price: 10.49
+        },
+        {
+        id: 17,
+        name: "Burger con Maiale Sfilacciato BBQ",
+        description: "Un gustoso burger di maiale sfilacciato al BBQ con coleslaw agrodolce.",
+        ingredients: ["Maiale Sfilacciato", "Cipolla", "Salsa BBQ", "Cavolo rosso", "Lattuga"],
+        image: pulledPork,
+        category: "Maiale",
+        price: 10.99
+        },
+        {
+        id: 18,
+        name: "Burger ai Funghi e Svizzero",
+        description: "Un succulento burger di manzo con funghi saltati e formaggio svizzero fuso.",
+        ingredients: ["Hamburger di Manzo", "Formaggio svizzero", "Funghi Saltati", "Lattuga", "Maionese all'Aglio"],
+        image: mashroom,
+        category: "Manzo",
+        price: 9.99
+        },
+        {
+        id: 19,
+        name: "Burger Vegano ai Fagioli Neri",
+        description: "Un delizioso e nutriente burger ai fagioli neri servito con avocado fresco e maionese vegana.",
+        ingredients: ["Hamburger di Fagioli Neri", "Avocado", "Lattuga", "Pomodoro", "Cipolla Rossa", "Maionese Vegana"],
+        image: vegan,
+        category: "Vegano",
+        price: 8.49
+        },
+        {
+        id: 20,
+        name: "Burger con Filetto di Pesce",
+        description: "Un burger di filetto di pesce impanato servito con lattuga e salsa tartara",
+        ingredients: ["Filetto di Pesce Impanato", "Lattuga", "Salsa Tartara"],
+        image: fish,
+        category: "Pesce",
+        price: 8.99
+        },
+        {
+        id: 21,
+        name: "Burger di Agnello",
+        description: "Un burger di agnello con feta, lattuga, pomodoro, cetriolo e salsa tzatziki.",
+        ingredients: ["Hamburger di Agnello", "Rucola",
+        "Cipolla rossa", "Salsa Tzatziki"],
+        image: lamb,
+        category: "Agnello",
+        price: 11.99
+        },
+        {
+        id: 22,
+        name: "Burger di Pollo Buffalo",
+        description: "Un croccante burger di pollo fritto con salsa Buffalo, lattuga e formaggio blue.",
+        ingredients: ["Pollo Fritto", "Salsa Buffalo", "Lattuga", "Cetriolini",],
+        image: buffaloChicken,
+        category: "Pollo",
+        price: 9.99
+        },
+        {
+        id: 23,
+        name: "Burger di Tacchino e Mirtilli",
+        description: "Un burger di tacchino servito con salsa di mirtilli rossi e brie, per un tocco autunnale.",
+        ingredients: ["Hamburger di Tacchino", "Rucola", "Formaggio fuso", "Salsa di Mirtilli Rossi",],
+        image: turkey,
+        category: "Tacchino",
+        price: 9.49
+        },
+        {
+        id: 24,
+        name: "Burger Veggie con Halloumi",
+        description: "Un burger vegetariano con halloumi grigliato, zucchine e peperoni rossi, accompagnato da pesto.",
+        ingredients: ["Halloumi Grigliato", "Zucchine", "Cetrioli", "Rucola"],
+        image: halloumi,
+        category: "Vegetariano",
+        price: 9.99
+        }
 ],
     // Sushi
     sushi: [
     {   id: 25, 
-        name: "Sushi Nigiri", 
-        description: "Nigiri con salmone fresco", 
+        name: "Sushi Nigiri Misto", 
+        description: "Nigiri con salmone, Tonno, Gambero e Pesce Bianco", 
         ingredients: ["Riso", "Salmone"], 
         image: "sushi_nigiri.jpg", 
         category: "Sushi", 
-        price: 4.00 
+        price: 12.00 
     },
     {   id: 26, 
-        name: "Sushi Maki", 
+        name: "Sushi Maki Misto", 
         description: "Maki con tonno e avocado", 
         ingredients: ["Riso", "Tonno", "Avocado"], 
         image: "sushi_maki.jpg", 
         category: "Sushi", 
-        price: 5.00 
+        price: 14.00 
     },
     {   id: 27, 
-        name: "Sashimi", 
+        name: "Sashimi Misto", 
         description: "Sashimi di tonno fresco", 
         ingredients: ["Tonno fresco"], 
         image: "sashimi.jpg", 
         category: "Sushi", 
-        price: 6.00 
+        price: 18.00 
     },
     {   id: 28, 
         name: "Uramaki", 
@@ -233,8 +260,8 @@ export const products = {
     },
     {   id: 29, 
         name: "Temaki", 
-        description: "Cono di sushi con tonno", 
-        ingredients: ["Alga", "Riso", "Tonno", "Avocado"], 
+        description: "Cono di sushi con salmone", 
+        ingredients: ["Alga", "Riso", "Salmone", "Avocado"], 
         image: "temaki.jpg", 
         category: "Sushi", 
         price: 5.50 
