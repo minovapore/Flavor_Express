@@ -11,6 +11,54 @@ import buffaloChicken from './assets/Panini/buffalo-chicken.png';
 import turkey from './assets/Panini/turkey.png';
 import halloumi from './assets/Panini/halloumi.png';
 
+//SUSHI
+import nigiriSalmone from './assets/Sushi/nigiri-salmone.png';
+import nigiriTonno from './assets/Sushi/nigiri-tonno.png';
+import sashimi from './assets/Sushi/sashimi.png';
+import temaki from './assets/Sushi/temaki.png';
+import ebiNigiri from './assets/Sushi/ebi-nigiri.png';
+import dragon from './assets/Sushi/dragon-roll.png';
+import veggy from './assets/Sushi/veggy.png';
+import philadelphia from './assets/Sushi/philadelphia.png';
+import spicy from './assets/Sushi/spicy.png';
+import mango from './assets/Sushi/mango.png';
+import mojito from './assets/Sushi/mojito.png';
+import newYork from './assets/Sushi/newYork.png';
+
+//FRITTI
+import patatine from './assets/Fritti/patatine.png';
+import crocchette from './assets/Fritti/crocchette.png';
+import cipolla from './assets/Fritti/cipolla.png';
+import mozzarelline from './assets/Fritti/mozzarelline.png';
+import arancino from './assets/Fritti/arancino.png';
+import ascolane from './assets/Fritti/olive-ascolane.png';
+import suppli from './assets/Fritti/suppli.png';
+import calamari from './assets/Fritti/calamari.png';
+import gamberi from './assets/Fritti/gamberi.png';
+import verdura from './assets/Fritti/verdura.png';
+import panelle from './assets/Fritti/panelle.png';
+import churros from './assets/Fritti/churros.png';
+
+//DOLCI
+import tiramisu from './assets/Dolci/tiramisu.png';
+import pannaCotta from './assets/Dolci/panna-cotta.png';
+import cheesecake from './assets/Dolci/cheesecake.png';
+import cannoli from './assets/Dolci/cannoli.png';
+import torta from './assets/Dolci/torta.png';
+import profiteroles from './assets/Dolci/profiteroles.png';
+import sfogliatella from './assets/Dolci/sfogliatella.png';
+import gelato from './assets/Dolci/gelato.png';
+import mousse from './assets/Dolci/mousse.png';
+import crostata from './assets/Dolci/crostata.png';
+import zeppola from './assets/Dolci/zeppola.png';
+import cremaCatalana from './assets/Dolci/crema-catalana.png';
+
+//INSALATE
+import insalataGreca from './assets/Insalate/insalata-greca.png';
+import caeserSalad from './assets/Insalate/caeserSalad.png';
+import caprese from './assets/Insalate/caprese.png';
+import insalataTonno from './assets/Insalate/insalataTonno.png';
+
 
 export const products = {
     // Pizze
@@ -226,101 +274,102 @@ export const products = {
 ],
     // Sushi
     sushi: [
-    {   id: 25, 
-        name: "Sushi Nigiri Misto", 
-        description: "Nigiri con salmone, Tonno, Gambero e Pesce Bianco", 
-        ingredients: ["Riso", "Salmone"], 
-        image: "sushi_nigiri.jpg", 
+    {   id: 25,
+        name: "Sashimi Misto", 
+        description: "Sashimi di tonno, salmone e branzino || 9pz", 
+        ingredients: ["Tonno", "Salmone", "Branzino"], 
+        image: sashimi, 
         category: "Sushi", 
         price: 12.00 
+        
     },
     {   id: 26, 
-        name: "Sushi Maki Misto", 
-        description: "Maki con tonno e avocado", 
-        ingredients: ["Riso", "Tonno", "Avocado"], 
-        image: "sushi_maki.jpg", 
+        name: "Nigiri Salmone", 
+        description: "Nigiri con salmone || 2pz", 
+        ingredients: ["Riso", "Salmone"], 
+        image: nigiriSalmone, 
         category: "Sushi", 
-        price: 14.00 
+        price: 4.00 
     },
     {   id: 27, 
-        name: "Sashimi Misto", 
-        description: "Sashimi di tonno fresco", 
-        ingredients: ["Tonno fresco"], 
-        image: "sashimi.jpg", 
+        name: "Nigiri Tonno", 
+        description: "Nigiri con tonno || 2pz", 
+        ingredients: ["Riso", "Tonno"], 
+        image: nigiriTonno, 
         category: "Sushi", 
-        price: 18.00 
+        price: 4.00 
     },
     {   id: 28, 
-        name: "Uramaki", 
-        description: "Uramaki con gamberi e avocado", 
-        ingredients: ["Riso", "Gamberi", "Avocado"], 
-        image: "uramaki.jpg", 
+        name: "Ebi Nigiri", 
+        description: "Nigiri con gamberi || 2pz", 
+        ingredients: ["Riso", "Gamberi"], 
+        image: ebiNigiri, 
         category: "Sushi", 
-        price: 6.50 
+        price: 5.00 
     },
     {   id: 29, 
         name: "Temaki", 
         description: "Cono di sushi con salmone", 
         ingredients: ["Alga", "Riso", "Salmone", "Avocado"], 
-        image: "temaki.jpg", 
+        image: temaki, 
         category: "Sushi", 
         price: 5.50 
     },
     {   id: 30, 
-        name: "California Roll", 
-        description: "Uramaki con surimi e avocado", 
-        ingredients: ["Riso", "Surimi", "Avocado", "Cetriolo"], 
-        image: "california_roll.jpg", 
+        name: "Philadelphia Special", 
+        description: "Roll con Salmone Crudo, avocado e Philadelphia || 8pz", 
+        ingredients: ["Riso", "Salmone", "Avocado", "Philadelphia"], 
+        image: philadelphia, 
         category: "Sushi", 
-        price: 6.50 
+        price: 12.50 
     },
     {   id: 31, 
-        name: "Hosomaki", 
-        description: "Hosomaki con cetriolo", 
-        ingredients: ["Riso", "Cetriolo"], 
-        image: "hosomaki.jpg", 
+        name: "Spicy Salmon", 
+        description: "Roll con Tartare di salmone crudo leggermente piccante || 4pz", 
+        ingredients: ["Riso", "Tartare di salmone", "Paprika"], 
+        image: spicy, 
         category: "Sushi", 
         price: 4.00 
     },
     {   id: 32, 
-        name: "Ebi Nigiri", 
-        description: "Nigiri con gamberi", 
-        ingredients: ["Riso", "Gamberi"], 
-        image: "ebi_nigiri.jpg", 
+        name: "Veggy Roll", 
+        description: "Roll Vegetariano con Carote e Zucchina fritta in Tempura, avvolto con Avocado || 4pz", 
+        ingredients: ["Riso", "Carote", "Zucchine", "Avocado"], 
+        image: veggy, 
         category: "Sushi", 
-        price: 5.00 
+        price: 6.50 
     },
     {   id: 33, 
         name: "Dragon Roll", 
-        description: "Uramaki con anguilla e avocado", 
-        ingredients: ["Riso", "Anguilla", "Avocado"], 
-        image: "dragon_roll.jpg", 
+        description: "Roll con Salmone Fritto, cetriolo avvolto con Avocado || 8pz", 
+        ingredients: ["Riso", "Salmone fritto", "Avocado", "Cetriolo"], 
+        image: dragon, 
         category: "Sushi", 
         price: 7.50 
     },
     {   id: 34, 
-        name: "Spicy Tuna Roll", 
-        description: "Maki piccante con tonno", 
-        ingredients: ["Riso", "Tonno piccante", "Avocado"], 
-        image: "spicy_tuna_roll.jpg", 
+        name: "Mango Style", 
+        description: "All’interno Spigola croccante in Tempura, salsa yuzu e all’esterno Mango e Peperoncino fresco || 8pz", 
+        ingredients: ["Riso", "Spigola", "Salsa yuzu", "Mango", "Peperoncino"], 
+        image: mango, 
         category: "Sushi", 
-        price: 6.00 
+        price: 12.50 
     },
     {   id: 35, 
-        name: "Rainbow Roll", 
-        description: "Uramaki con vari tipi di pesce", 
-        ingredients: ["Riso", "Salmone", "Tonno", "Avocado"], 
-        image: "rainbow_roll.jpg", 
+        name: "Mojito Roll", 
+        description: "All’interno spigola cruda marinata con Rum, Menta e scorza di Lime e ananas.All’esterno tartare di Ananas e Maionese di riso || 8pz", 
+        ingredients: ["Riso", "Spigola", "Rum", "Menta", "Lime", "Ananas", "Maionese di riso"], 
+        image: mojito, 
         category: "Sushi", 
-        price: 7.50 
+        price: 13.50 
     },
     {   id: 36, 
-        name: "Tuna Tataki", 
-        description: "Tonno scottato con salsa ponzu", 
-        ingredients: ["Tonno", "Salsa ponzu"], 
-        image: "tuna_tataki.jpg", 
+        name: "New York Integrale Roll", 
+        description: "Roll con Riso Integrale, all’interno Salmone e Avocado || 4pz", 
+        ingredients: ["Riso integrale", "Salmone", "Avocado"], 
+        image: newYork, 
         category: "Sushi", 
-        price: 8.00 
+        price: 5.50 
     },
 ],
     // Frittura
@@ -329,7 +378,7 @@ export const products = {
         name: "Patatine Fritte", 
         description: "Classiche patatine fritte croccanti", 
         ingredients: ["Patate", "Olio"], 
-        image: "patatine_fritte.jpg", 
+        image: patatine, 
         category: "Frittura", 
         price: 3.00 
     },
@@ -337,7 +386,7 @@ export const products = {
         name: "Crocchette di Patate", 
         description: "Crocchette fritte di patate", 
         ingredients: ["Patate", "Pangrattato", "Formaggio"], 
-        image: "crocchette_patate.jpg", 
+        image: crocchette, 
         category: "Frittura", 
         price: 4.00 
     },
@@ -345,7 +394,7 @@ export const products = {
         name: "Anelli di Cipolla", 
         description: "Anelli di cipolla fritti e croccanti", 
         ingredients: ["Cipolla", "Farina", "Olio"], 
-        image: "anelli_cipolla.jpg", 
+        image: cipolla, 
         category: "Frittura", 
         price: 4.50 
     },
@@ -353,15 +402,15 @@ export const products = {
         name: "Mozzarelline Fritte", 
         description: "Bocconcini di mozzarella fritti", 
         ingredients: ["Mozzarella", "Pangrattato", "Olio"], 
-        image: "mozzarelline_fritte.jpg", 
+        image: mozzarelline, 
         category: "Frittura", 
         price: 4.50 
     },
     {   id: 41, 
         name: "Arancini", 
-        description: "Sfere di riso fritte ripiene", 
+        description: "Triangoli di riso fritte ripiene", 
         ingredients: ["Riso", "Ragù", "Mozzarella"], 
-        image: "arancini.jpg", 
+        image: arancino, 
         category: "Frittura", 
         price: 5.00 
     },
@@ -369,7 +418,7 @@ export const products = {
         name: "Olive Ascolane", 
         description: "Olive ripiene di carne e fritte", 
         ingredients: ["Olive", "Carne", "Pangrattato"], 
-        image: "olive_ascolane.jpg", 
+        image: ascolane, 
         category: "Frittura", 
         price: 4.50 
     },
@@ -377,7 +426,7 @@ export const products = {
         name: "Supplì", 
         description: "Crocchetta di riso con mozzarella", 
         ingredients: ["Riso", "Mozzarella", "Pomodoro"], 
-        image: "suppli.jpg", 
+        image: suppli, 
         category: "Frittura", 
         price: 4.00 
     },
@@ -385,15 +434,15 @@ export const products = {
         name: "Calamari Fritti", 
         description: "Anelli di calamari fritti", 
         ingredients: ["Calamari", "Farina", "Olio"], 
-        image: "calamari_fritti.jpg", 
+        image: calamari, 
         category: "Frittura", 
         price: 7.00 
     },
     {   id: 45, 
-        name: "Gamberi Fritti", 
-        description: "Gamberi fritti croccanti", 
+        name: "Gamberi in Tempura", 
+        description: "Gamberi in tempura", 
         ingredients: ["Gamberi", "Farina", "Olio"], 
-        image: "gamberi_fritti.jpg", 
+        image: gamberi, 
         category: "Frittura", 
         price: 7.50 
     },
@@ -401,7 +450,7 @@ export const products = {
         name: "Frittelle di Verdure", 
         description: "Frittelle croccanti di verdure miste", 
         ingredients: ["Zucchine", "Carote", "Farina"], 
-        image: "frittelle_verdure.jpg", 
+        image: verdura, 
         category: "Frittura", 
         price: 4.00 
     },
@@ -409,7 +458,7 @@ export const products = {
         name: "Panelle", 
         description: "Frittelle di farina di ceci", 
         ingredients: ["Farina di ceci", "Acqua", "Sale"], 
-        image: "panelle.jpg", 
+        image: panelle, 
         category: "Frittura", 
         price: 3.50 
     },
@@ -417,7 +466,7 @@ export const products = {
         name: "Churros Salati", 
         description: "Churros fritti salati", 
         ingredients: ["Farina", "Olio", "Sale"], 
-        image: "churros_salati.jpg", 
+        image: churros, 
         category: "Frittura", 
         price: 5.00 
     },
@@ -428,15 +477,15 @@ export const products = {
         name: "Tiramisù", 
         description: "Dolce con mascarpone e caffè", 
         ingredients: ["Mascarpone", "Caffè", "Savoiardi"], 
-        image: "tiramisu.jpg", 
+        image: tiramisu, 
         category: "Dolci", 
         price: 4.50 
     },
     {   id: 50, 
         name: "Panna Cotta", 
-        description: "Dolce al cucchiaio con panna", 
-        ingredients: ["Panna", "Zucchero", "Vaniglia"], 
-        image: "panna_cotta.jpg", 
+        description: "Dolce al cucchiaio con panna, fragole e mirtilli", 
+        ingredients: ["Panna", "Zucchero", "Vaniglia", "Fragola", "Mirtilli"], 
+        image: pannaCotta, 
         category: "Dolci", 
         price: 4.00 
     },
@@ -444,7 +493,7 @@ export const products = {
         name: "Cheesecake", 
         description: "Torta al formaggio con base croccante", 
         ingredients: ["Formaggio fresco", "Biscotti", "Zucchero"], 
-        image: "cheesecake.jpg", 
+        image: cheesecake, 
         category: "Dolci", 
         price: 5.00 
     },
@@ -452,7 +501,7 @@ export const products = {
         name: "Cannoli Siciliani", 
         description: "Dolci ripieni di ricotta", 
         ingredients: ["Ricotta", "Cannolo", "Zucchero"], 
-        image: "cannoli_siciliani.jpg", 
+        image: cannoli, 
         category: "Dolci", 
         price: 5.50 
     },
@@ -460,7 +509,7 @@ export const products = {
         name: "Torta al Cioccolato", 
         description: "Torta soffice al cioccolato", 
         ingredients: ["Cioccolato", "Farina", "Uova"], 
-        image: "torta_cioccolato.jpg", 
+        image: torta, 
         category: "Dolci", 
         price: 4.50 
     },
@@ -468,7 +517,7 @@ export const products = {
         name: "Profiteroles", 
         description: "Bignè ripieni di crema e ricoperti di cioccolato", 
         ingredients: ["Bignè", "Crema", "Cioccolato"], 
-        image: "profiteroles.jpg", 
+        image: profiteroles, 
         category: "Dolci", 
         price: 6.00 
     },
@@ -476,7 +525,7 @@ export const products = {
         name: "Sfogliatella", 
         description: "Dolce napoletano ripieno di ricotta", 
         ingredients: ["Pasta sfoglia", "Ricotta", "Zucchero"], 
-        image: "sfogliatella.jpg", 
+        image: sfogliatella, 
         category: "Dolci", 
         price: 3.50 
     },
@@ -484,7 +533,7 @@ export const products = {
         name: "Gelato Artigianale", 
         description: "Gelato artigianale ai gusti vari", 
         ingredients: ["Latte", "Zucchero", "Gusti vari"], 
-        image: "gelato_artigianale.jpg", 
+        image: gelato, 
         category: "Dolci", 
         price: 4.00 
     },
@@ -492,7 +541,7 @@ export const products = {
         name: "Mousse al Cioccolato", 
         description: "Mousse soffice al cioccolato fondente", 
         ingredients: ["Cioccolato", "Panna", "Zucchero"], 
-        image: "mousse_cioccolato.jpg", 
+        image: mousse, 
         category: "Dolci", 
         price: 5.00 
     },
@@ -500,15 +549,15 @@ export const products = {
         name: "Crostata di Frutta", 
         description: "Crostata con crema pasticcera e frutta fresca", 
         ingredients: ["Pasta frolla", "Crema pasticcera", "Frutta fresca"], 
-        image: "crostata_frutta.jpg", 
+        image: crostata, 
         category: "Dolci", 
         price: 4.50 
     },
     {   id: 59, 
-        name: "Zeppole", 
-        description: "Dolci fritti ripieni di crema", 
-        ingredients: ["Farina", "Crema", "Olio"], 
-        image: "zeppole.jpg", 
+        name: "Zeppola", 
+        description: "Dolce fritte ripieno di crema con mirtillo sopra", 
+        ingredients: ["Farina", "Crema", "Mirtillo"], 
+        image: zeppola, 
         category: "Dolci", 
         price: 3.00 
     },
@@ -516,7 +565,7 @@ export const products = {
         name: "Crema Catalana", 
         description: "Dolce al cucchiaio con crosta di zucchero caramellato", 
         ingredients: ["Latte", "Zucchero", "Uova"], 
-        image: "crema_catalana.jpg", 
+        image: cremaCatalana, 
         category: "Dolci", 
         price: 5.00 
     },
@@ -526,8 +575,8 @@ export const products = {
     {   id: 61, 
         name: "Insalata Greca", 
         description: "Insalata con feta, pomodori e olive", 
-        ingredients: ["Feta", "Pomodori", "Olive", "Cetrioli"], 
-        image: "insalata_greca.jpg", 
+        ingredients: ["Feta", "Pomodori", "Olive", "Cetrioli", "Insalata"], 
+        image: insalataGreca, 
         category: "Insalate", 
         price: 6.50 
     },
@@ -535,7 +584,7 @@ export const products = {
         name: "Caesar Salad", 
         description: "Insalata con pollo grigliato e crostini", 
         ingredients: ["Insalata", "Pollo grigliato", "Parmigiano", "Crostini"], 
-        image: "caesar_salad.jpg", 
+        image: caeserSalad, 
         category: "Insalate", 
         price: 7.00 
     },
@@ -543,15 +592,15 @@ export const products = {
         name: "Insalata Caprese", 
         description: "Insalata con mozzarella di bufala e pomodori", 
         ingredients: ["Mozzarella di bufala", "Pomodori", "Basilico"], 
-        image: "insalata_caprese.jpg", 
+        image: caprese, 
         category: "Insalate", 
         price: 5.50 
     },
     {   id: 64, 
         name: "Insalata di Tonno", 
-        description: "Insalata con tonno, uova e fagiolini", 
-        ingredients: ["Insalata", "Tonno", "Uova", "Fagiolini"], 
-        image: "insalata_tonno.jpg", 
+        description: "Insalata con tonno, uova, olive e mais", 
+        ingredients: ["Insalata", "Tonno", "Uova", "Olive", "Mais"], 
+        image: insalataTonno, 
         category: "Insalate", 
         price: 6.50 
     },
