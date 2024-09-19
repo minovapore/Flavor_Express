@@ -58,6 +58,30 @@ import insalataGreca from './assets/Insalate/insalata-greca.png';
 import caeserSalad from './assets/Insalate/caeserSalad.png';
 import caprese from './assets/Insalate/caprese.png';
 import insalataTonno from './assets/Insalate/insalataTonno.png';
+import quinoa from './assets/Insalate/quinoa.png';
+import mista from './assets/Insalate/mista.png';
+import riso from './assets/Insalate/riso.png';
+import pollo from './assets/Insalate/pollo.png';
+import waldorf from './assets/Insalate/waldorf.png';
+import couscous from './assets/Insalate/couscous.png';
+import mare from './assets/Insalate/mare.png';
+import ceci from './assets/Insalate/ceci.png';
+
+//BEVANDE
+import cocaCola from './assets/Bevande/cocacola.png';
+import naturale from './assets/Bevande/naturale.png';
+import frizzante from './assets/Bevande/frizzante.png';
+import fanta from './assets/Bevande/fanta.png';
+import sprite from './assets/Bevande/sprite.png';
+import birra from './assets/Bevande/birra.png';
+import rosso from './assets/Bevande/rosso.png';
+import bianco from './assets/Bevande/bianco.png';
+import succo from './assets/Bevande/succo.png';
+import limonata from './assets/Bevande/limonata.png';
+import limone from './assets/Bevande/limone.png';
+import pesca from './assets/Bevande/pesca.png';
+
+
 
 
 export const products = {
@@ -607,64 +631,64 @@ export const products = {
     {   id: 65, 
         name: "Insalata di Quinoa", 
         description: "Insalata con quinoa e verdure fresche", 
-        ingredients: ["Quinoa", "Cetrioli", "Pomodori", "Avocado"], 
-        image: "insalata_quinoa.jpg", 
+        ingredients: ["Quinoa", "Ravanello", "Pomodori", "Avocado", "Zucchina"], 
+        image: quinoa, 
         category: "Insalate", 
         price: 7.50 
     },
     {   id: 66, 
         name: "Insalata Mista", 
         description: "Insalata con verdure miste di stagione", 
-        ingredients: ["Insalata", "Pomodori", "Carote", "Cetrioli"], 
-        image: "insalata_mista.jpg", 
+        ingredients: ["Insalata", "Pomodori", "Olive", "Feta", "Peperoni", "Ravanello"], 
+        image: mista, 
         category: "Insalate", 
         price: 5.00 
     },
     {   id: 67, 
         name: "Insalata di Riso", 
-        description: "Insalata di riso con verdure e tonno", 
-        ingredients: ["Riso", "Tonno", "Verdure", "Olive"], 
-        image: "insalata_riso.jpg", 
+        description: "Insalata di riso con pomodori e tonno", 
+        ingredients: ["Riso", "Tonno", "Pomodori", "Olive"], 
+        image: riso, 
         category: "Insalate", 
         price: 6.00 
     },
     {   id: 68, 
         name: "Insalata di Pollo", 
-        description: "Insalata con pollo, avocado e pomodori", 
-        ingredients: ["Insalata", "Pollo", "Avocado", "Pomodori"], 
-        image: "insalata_pollo.jpg", 
+        description: "Insalata di pollo con sedano, pomodori secchi e gorgonzola", 
+        ingredients: ["Insalata", "Pollo", "Sedano", "Pomodori secchi", "Gorgonzola"], 
+        image: pollo, 
         category: "Insalate", 
         price: 6.50 
     },
     {   id: 69, 
         name: "Insalata Waldorf", 
-        description: "Insalata con mele, noci e sedano", 
-        ingredients: ["Mele", "Noci", "Sedano", "Insalata"], 
-        image: "insalata_waldorf.jpg", 
+        description: "Insalata con mele, noci, sedano e uva", 
+        ingredients: ["Mele", "Noci", "Sedano", "Uva", "Insalata"], 
+        image: waldorf, 
         category: "Insalate", 
         price: 7.50 
     },
     {   id: 70, 
         name: "Insalata di Couscous", 
-        description: "Insalata di couscous con verdure fresche", 
-        ingredients: ["Couscous", "Cetrioli", "Pomodori", "Menta"], 
-        image: "insalata_couscous.jpg", 
+        description: "Insalata di couscous con pomodori, peperoni, melanzane e zucchine", 
+        ingredients: ["Couscous", "Peperoni", "Pomodori", "Melanzane", "Zucchine"], 
+        image: couscous, 
         category: "Insalate", 
         price: 7.00 
     },
     {   id: 71, 
         name: "Insalata di Mare", 
         description: "Insalata con frutti di mare freschi", 
-        ingredients: ["Calamari", "Gamberi", "Polpo", "Prezzemolo"], 
-        image: "insalata_mare.jpg", 
+        ingredients: ["Calamari", "Gamberi", "Polpo", "Cozze", "Prezzemolo"], 
+        image: mare, 
         category: "Insalate", 
         price: 9.50 
     },
     {   id: 72, 
         name: "Insalata di Ceci", 
-        description: "Insalata con ceci e verdure", 
-        ingredients: ["Ceci", "Pomodori", "Cipolla rossa", "Prezzemolo"], 
-        image: "insalata_ceci.jpg", 
+        description: "Insalata con ceci, pomodori, feta e frutta secca", 
+        ingredients: ["Ceci", "Pomodori", "Feta", "Frutta secca"], 
+        image: ceci, 
         category: "Insalate", 
         price: 6.00 
     },
@@ -674,98 +698,98 @@ export const products = {
     {   id: 73, 
         name: "Coca Cola", 
         description: "Bevanda gassata classica", 
-        ingredients: ["Acqua", "Zucchero", "An  idr   ide carbonica"], 
-        image: "coca_cola.jpg", 
+        // ingredients: ["Acqua", "Zucchero", "An  idr   ide carbonica"], 
+        image: cocaCola, 
         category: "Bevande", 
         price: 2.50 
     },
     {   id: 74, 
         name: "Acqua Naturale", 
         description: "Acqua minerale naturale", 
-        ingredients: ["Acqua"], 
-        image: "acqua_naturale.jpg", 
+        // ingredients: ["Acqua"], 
+        image: naturale, 
         category: "Bevande", 
         price: 1.50 
     },
     {   id: 75, 
         name: "Acqua Frizzante", 
         description: "Acqua minerale frizzante", 
-        ingredients: ["Acqua", "An  idr   ide carbonica"], 
-        image: "acqua_frizzante.jpg", 
+        // ingredients: ["Acqua", "An  idr   ide carbonica"], 
+        image: frizzante, 
         category: "Bevande", 
         price: 1.50 
     },
     {   id: 76, 
         name: "Fanta", 
         description: "Bevanda gassata all'arancia", 
-        ingredients: ["Acqua", "Zucchero", "Succo d'arancia"], 
-        image: "fanta.jpg", 
+        // ingredients: ["Acqua", "Zucchero", "Succo d'arancia"], 
+        image: fanta, 
         category: "Bevande", 
         price: 2.50 
     },
     {   id: 77, 
         name: "Sprite", 
         description: "Bevanda gassata al limone e lime", 
-        ingredients: ["Acqua", "Zucchero", "An  idr   ide carbonica", "Limone"], 
-        image: "sprite.jpg", 
+        // ingredients: ["Acqua", "Zucchero", "An  idr   ide carbonica", "Limone"], 
+        image: sprite, 
         category: "Bevande", 
         price: 2.50 
     },
     {   id: 78, 
-        name: "Birra", 
-        description: "Birra chiara", 
-        ingredients: ["Acqua", "Malto d'orzo", "Luppolo"], 
-        image: "birra.jpg", 
+        name: "Birra Moretti", 
+        description: "Birra", 
+        // ingredients: ["Acqua", "Malto d'orzo", "Luppolo"], 
+        image: birra, 
         category: "Bevande", 
         price: 4.00 
     },
     {   id: 79, 
         name: "Vino Rosso", 
-        description: "Bicchiere di vino rosso", 
-        ingredients: ["Uva", "Alcol"], 
-        image: "vino_rosso.jpg", 
+        description: "Vino rosso di Montalcino", 
+        // ingredients: ["Uva", "Alcol"], 
+        image: rosso, 
         category: "Bevande", 
         price: 5.00 
     },
     {   id: 80, 
         name: "Vino Bianco", 
-        description: "Bicchiere di vino bianco", 
-        ingredients: ["Uva", "Alcol"], 
-        image: "vino_bianco.jpg", 
+        description: "Vino bianco Ninì", 
+        // ingredients: ["Uva", "Alcol"], 
+        image: bianco, 
         category: "Bevande", 
         price: 5.00 
     },
     {   id: 81, 
         name: "Succo di Frutta", 
-        description: "Succo di frutta al gusto pesca", 
-        ingredients: ["Pesca", "Acqua", "Zucchero"], 
-        image: "succo_frutta.jpg", 
+        description: "Succo di frutta al gusto ace", 
+        // ingredients: ["Pesca", "Acqua", "Zucchero"], 
+        image: succo, 
         category: "Bevande", 
         price: 2.00 
     },
     {   id: 82, 
-        name: "Limonata", 
+        name: "Limonata Schweppes", 
         description: "Bevanda fresca al limone", 
-        ingredients: ["Acqua", "Zucchero", "Limone"], 
-        image: "limonata.jpg", 
+        // ingredients: ["Acqua", "Zucchero", "Limone"], 
+        image: limonata, 
         category: "Bevande", 
         price: 2.50 
     },
     {   id: 83, 
-        name: "Tè Freddo", 
-        description: "Bevanda al tè freddo", 
-        ingredients: ["Acqua", "Zucchero", "Tè"], 
-        image: "te_freddo.jpg", 
+        name: "Thè al limone", 
+        description: "Bevanda al limone", 
+        // ingredients: ["Acqua", "Zucchero", "Tè"], 
+        image: limone, 
         category: "Bevande", 
         price: 2.50 
     },
     {   id: 84, 
-        name: "Caffè", 
-        description: "Caffè espresso", 
-        ingredients: ["Caffè", "Acqua"], 
-        image: "caffe.jpg", 
+        name: "Thè alla pesca",
+        description: "thè alla pesca", 
+        //  ingredients: ["Acqua", "Zucchero", "Tè"], 
+        image: pesca, 
         category: "Bevande", 
-        price: 1.50 
+        price: 2.50 
     },
 ],
 };
