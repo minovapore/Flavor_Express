@@ -85,23 +85,26 @@ export default function Food({isCartVisible}){
             {isCartVisible && (
                 <div className={"z-10 fixed p-4 right-0 top-[80px] bg-primary w-72 h-screen overflow-y-scroll"}>
                     <p className="text-2xl font-bold">Il tuo ordine: {getTotalAmount()}€</p>
-                    {product.map(product => {
-                        if (cartItems.product[product.id] !== 0) {
-                            return (
-                                <div key={product.id} className="relative glass my-3 grid grid-cols-5 overflow-hidden">
-                                    <img className="rounded-lg w-[100px] h-[100px] object-cover col-span-2" src={product.image} alt="img" />
-                                    <div>
-                                        <p className="text-xl font-bold pl-2">{cartItems.product[product.id]} X </p>
-                                        <p className="flex items-center space-x-4">{product.name}</p>
-                                        <p>{product.price}€</p>
+                    {Object.keys(products).map(category => (
+                        products[category].map(product => {
+                            if (cartItems[category] && cartItems[category][product.id] !== 0) {
+                                return (
+                                    <div key={product.id} className="relative glass my-3 grid grid-cols-5 overflow-hidden">
+                                        <img className="rounded-lg w-[100px] h-[100px] object-cover col-span-2" src={product.image} alt="img" />
+                                        <div>
+                                            <p className="text-xl font-bold pl-2">{cartItems[category][product.id]} X </p>
+                                            <p className="flex items-center space-x-4">{product.name}</p>
+                                            <p>{product.price}€</p>
+                                        </div>
+                                        <div className="absolute right-0 bottom-0 gap-2 font-bold">
+                                            <button onClick={() => removeFromCart(category, product.id)} className="text-red-600 bg-red-300 p-2 rounded">Rimuovi</button>
+                                        </div>
                                     </div>
-                                    <div className="absolute right-0 bottom-0 gap-2 font-bold">
-                                        <button onClick={() => removeFromCart('product', product.id)} className="text-red-600 bg-red-300 p-2 rounded">Rimuovi</button>
-                                    </div>
-                                </div>
-                            );
-                        }
-                    })}
+                                );
+                            }
+                            return null; // Return null if the product is not in the cart
+                        })
+                    ))}
                 </div>
             )}
 

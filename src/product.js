@@ -81,7 +81,19 @@ import limonata from './assets/Bevande/limonata.png';
 import limone from './assets/Bevande/limone.png';
 import pesca from './assets/Bevande/pesca.png';
 
-
+//PIZZE
+import margherita from './assets/Pizze/margherita.png';
+import diavola from './assets/Pizze/diavola.png';
+import formaggi from './assets/Pizze/formaggi.png';
+import capricciosa from './assets/Pizze/capricciosa.png';
+import contadina from './assets/Pizze/contadina.png';
+import crudaiola from './assets/Pizze/crudaiola.png';
+import rossa from './assets/Pizze/rossa.png';
+import salsiccia from './assets/Pizze/salsiccia.png';
+import pesto from './assets/Pizze/pesto.png';
+import funghi from './assets/Pizze/funghi.png';
+import tonnoCipolla from './assets/Pizze/tonnoCipolla.png';
+import pistacchiosa from './assets/Pizze/pistacchiosa.png';
 
 
 export const products = {
@@ -91,7 +103,7 @@ export const products = {
         name: "Margherita", 
         description: "Pizza classica con pomodoro e mozzarella", 
         ingredients: ["Pomodoro", "Mozzarella", "Basilico"], 
-        image: "margherita.jpg", 
+        image: margherita, 
         category: "Pizze", 
         price: 5.00 
     },
@@ -99,7 +111,7 @@ export const products = {
         name: "Diavola", 
         description: "Pizza con salame piccante", 
         ingredients: ["Pomodoro", "Mozzarella", "Salame piccante"], 
-        image: "diavola.jpg", 
+        image: diavola, 
         category: "Pizze", 
         price: 6.50 
     },
@@ -107,7 +119,7 @@ export const products = {
         name: "Quattro Formaggi", 
         description: "Pizza con quattro formaggi diversi", 
         ingredients: ["Mozzarella", "Gorgonzola", "Parmigiano", "Fontina"], 
-        image: "quattro_formaggi.jpg", 
+        image: formaggi, 
         category: "Pizze", 
         price: 7.00 
     },
@@ -115,39 +127,39 @@ export const products = {
         name: "Capricciosa", 
         description: "Pizza con prosciutto, funghi e carciofi", 
         ingredients: ["Pomodoro", "Mozzarella", "Prosciutto", "Funghi", "Carciofi"], 
-        image: "capricciosa.jpg", 
+        image: capricciosa, 
         category: "Pizze", 
         price: 7.50 
     },
     {   id: 5, 
-        name: "Vegetariana", 
-        description: "Pizza con verdure miste", 
-        ingredients: ["Pomodoro", "Mozzarella", "Peperoni", "Zucchine", "Melanzane"], 
-        image: "vegetariana.jpg", 
+        name: "Contadina", 
+        description: "Pizza con pomodoro, fiordilatte, prosciutto cotto, funghi, uova e salame", 
+        ingredients: ["Pomodoro", "Fiordilatte", "Prosciutto cotto", "Funghi", "Uova", "Salame"], 
+        image: contadina, 
         category: "Pizze", 
         price: 6.50 
     },
     {   id: 6, 
-        name: "Prosciutto e Funghi", 
-        description: "Pizza con prosciutto cotto e funghi", 
-        ingredients: ["Pomodoro", "Mozzarella", "Prosciutto cotto", "Funghi"], 
-        image: "prosciutto_funghi.jpg", 
+        name: "Crudaiola", 
+        description: "Pizza con bresaola, grana e rucola", 
+        ingredients: ["Pomodoro", "Mozzarella", "Bresaola", "Grana", "Rucola"], 
+        image: crudaiola, 
         category: "Pizze", 
         price: 7.00 
     },
     {   id: 7, 
         name: "Tonno e Cipolle", 
-        description: "Pizza con tonno e cipolle rosse", 
-        ingredients: ["Pomodoro", "Mozzarella", "Tonno", "Cipolle rosse"], 
-        image: "tonno_cipolle.jpg", 
+        description: "Pizza con tonno e cipolle", 
+        ingredients: ["Pomodoro", "Mozzarella", "Tonno", "Cipolle"], 
+        image: tonnoCipolla, 
         category: "Pizze", 
         price: 7.50 
     },
     {   id: 8, 
-        name: "Bufalina", 
-        description: "Pizza con mozzarella di bufala", 
-        ingredients: ["Pomodoro", "Mozzarella di bufala", "Basilico"], 
-        image: "bufalina.jpg", 
+        name: "Rossa", 
+        description: "Pizza con pomodoro", 
+        ingredients: ["Pomodoro", "Aglio", "Origano"], 
+        image: rossa, 
         category: "Pizze", 
         price: 8.00 
     },
@@ -155,15 +167,15 @@ export const products = {
         name: "Salsiccia e Friarielli", 
         description: "Pizza con salsiccia e friarielli", 
         ingredients: ["Mozzarella", "Salsiccia", "Friarielli"], 
-        image: "salsiccia_friarielli.jpg", 
+        image: salsiccia, 
         category: "Pizze", 
         price: 7.50 
     },
     {   id: 10, 
-        name: "Frutti di Mare", 
-        description: "Pizza con frutti di mare freschi", 
-        ingredients: ["Pomodoro", "Mozzarella", "Frutti di mare", "Prezzemolo"], 
-        image: "frutti_mare.jpg", 
+        name: "Pistacchiosa", 
+        description: "Pizza con motadella, burratina e granelli di pistacchioi", 
+        ingredients: ["Mortadella", "Burratina", "Pistacchio"], 
+        image: pistacchiosa, 
         category: "Pizze", 
         price: 9.00 
     },
@@ -171,15 +183,15 @@ export const products = {
         name: "Pizza al Pesto", 
         description: "Pizza con pesto di basilico", 
         ingredients: ["Pesto", "Mozzarella", "Pomodorini"], 
-        image: "pizza_pesto.jpg", 
+        image: pesto, 
         category: "Pizze", 
         price: 7.00 
     },
     {   id: 12, 
-        name: "Pizza Tartufata", 
-        description: "Pizza con crema di tartufo", 
-        ingredients: ["Mozzarella", "Crema di tartufo", "Funghi"], 
-        image: "pizza_tartufo.jpg", 
+        name: "Pizza Salsiccia e Funghi", 
+        description: "Pizza con salsiccia e funghi", 
+        ingredients: ["Pomodoro", "Mozzarella", "Salsiccia", "Funghi"], 
+        image: funghi, 
         category: "Pizze", 
         price: 9.50 
     },

@@ -5,6 +5,7 @@ import { CiFries } from "react-icons/ci";
 import { LuCakeSlice } from "react-icons/lu";
 import { LuSalad } from "react-icons/lu";
 import { RiDrinks2Line } from "react-icons/ri";
+import '../style/CategorySection.css';
 
 export default function CategorySection({category, items, addToCart}){
     return(
@@ -22,32 +23,34 @@ export default function CategorySection({category, items, addToCart}){
             
             <div className="grid xl:grid-cols-3 place-items-center gap-5 my-5">
                 {items.map(item => (
-                    <div key={item.id} className="w-[470px] h-[300px] p-2 bg-det txt-sec rounded-lg transition-all duration-200 hover:scale-110">
+                    <div key={item.id} className="w-[470px] h-[225px] p-2 bg-sec txt-det rounded-lg transition-all duration-200 hover:scale-105 border-card">
                         <a role="button" onClick={()=>document.getElementById(`my_modal_${item.id}`).showModal()}>
-                            <div className="flex items-center justify-between bg-primary">
-                        <div className="bg-error">
-                            <h2 className="font-semibold text-xl">{item.name}</h2>
-                            <h3 className="font-semibold text-lg">{item.price}€</h3>
-                        </div>
-                        <div className="flex justify-center items-center w-[250px] h-[200px] bg-info">
-                        <img className="rounded-lg mx-auto" src={item.image} alt={item.name} />
-                        </div>
-                        </div>
-                        <dialog key={item.id} id={`my_modal_${item.id}`} className="modal">
-                            <div  className="modal-box">
-                                <h3 className="font-bold text-lg">{item.name}</h3>
-                                <p className="py-4">{item.description}</p>
-                                <p className="py-4">{item.ingredients}</p>
-                                <p>{item.price}€</p>
-                                <div className="modal-action">
-                                    <form method="dialog">
-                                        <button className="btn">Close</button>
-                                        <button onClick={() => addToCart(category, item.id)} className="p-2 text-xl w-32 rounded-xl bg-primary">Aggiungi</button>
-                                    </form>
+                            <div className="flex items-center justify-between my-1">
+                                <div className="bg-info w-[200px]">
+                                    <h2 className="font-bold text-xl">{item.name}</h2>
+                                    <p className="line-clamp-1 bg-error w-[175px]">{item.description}</p>
+                                    <h3 className="font-semibold text-lg">{item.price}€</h3>
+                                </div>
+                                <div className="flex justify-center items-center w-[250px] h-[200px] bg-primary">
+                                    <img className="rounded-lg mx-auto" src={item.image} alt={item.name} 
+                                    />
                                 </div>
                             </div>
-                        </dialog>
-            </a>
+                            <dialog key={item.id} id={`my_modal_${item.id}`} className="modal">
+                                <div  className="modal-box">
+                                    <h3 className="font-bold text-lg">{item.name}</h3>
+                                    <p className="py-4">{item.description}</p>
+                                    <p className="py-4">{item.ingredients}</p>
+                                    <p>{item.price}€</p>
+                                    <div className="modal-action">
+                                        <form method="dialog">
+                                            <button className="btn">Close</button>
+                                            <button onClick={() => addToCart(category, item.id)} className="p-2 text-xl w-32 rounded-xl bg-primary">Aggiungi</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </dialog>
+                        </a>
                     </div>
                 ))}
             </div>
