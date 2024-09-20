@@ -5,6 +5,7 @@ import { CiFries } from "react-icons/ci";
 import { LuCakeSlice } from "react-icons/lu";
 import { LuSalad } from "react-icons/lu";
 import { RiDrinks2Line } from "react-icons/ri";
+import { IoMdClose } from "react-icons/io";
 import '../style/CategorySection.css';
 
 export default function CategorySection({category, items, addToCart}){
@@ -26,27 +27,36 @@ export default function CategorySection({category, items, addToCart}){
                     <div key={item.id} className="w-[470px] h-[225px] p-2 bg-sec txt-det rounded-lg transition-all duration-200 hover:scale-105 border-card">
                         <a role="button" onClick={()=>document.getElementById(`my_modal_${item.id}`).showModal()}>
                             <div className="flex items-center justify-between my-1">
-                                <div className="bg-info w-[200px]">
-                                    <h2 className="font-bold text-xl">{item.name}</h2>
-                                    <p className="line-clamp-1 bg-error w-[175px]">{item.description}</p>
-                                    <h3 className="font-semibold text-lg">{item.price}€</h3>
+                                <div className="w-[250px] flex flex-col justify-between">
+                                    <h2 className="font-bold text-2xl">{item.name}</h2>
+                                    <p className="line-clamp-1 my-2 text-lg w-full">{item.description}</p>
+                                    <h3 className="font-semibold text-xl">Prezzo: {item.price}€</h3>
                                 </div>
-                                <div className="flex justify-center items-center w-[250px] h-[200px] bg-primary">
+                                <div className="flex justify-center items-center w-[250px] h-[200px]">
                                     <img className="rounded-lg mx-auto" src={item.image} alt={item.name} 
                                     />
                                 </div>
                             </div>
                             <dialog key={item.id} id={`my_modal_${item.id}`} className="modal">
-                                <div  className="modal-box">
-                                    <h3 className="font-bold text-lg">{item.name}</h3>
-                                    <p className="py-4">{item.description}</p>
-                                    <p className="py-4">{item.ingredients}</p>
-                                    <p>{item.price}€</p>
-                                    <div className="modal-action">
-                                        <form method="dialog">
-                                            <button className="btn">Close</button>
-                                            <button onClick={() => addToCart(category, item.id)} className="p-2 text-xl w-32 rounded-xl bg-primary">Aggiungi</button>
-                                        </form>
+                                <div className="modal-box bg-modal txt-sec">
+                                    <form method="dialog">
+                                        <button className="btn text-3xl btn-sm btn-ghost absolute right-1 top-3"><IoMdClose /></button>
+                                    </form>
+                                    <h3 className="font-bold text-4xl">{item.name}</h3>
+                                    <div className="my-4">
+                                        <h2 className="text-xl font-semibold">Descrizione</h2>
+                                        <p className="text-lg">{item.description}</p>
+                                    </div>
+                                    <div>
+                                        <h2 className="text-xl font-semibold">Ingredienti</h2>
+                                        <p className="text-lg">{item.ingredients}</p>
+                                    </div>
+                                    <div className="my-4">
+                                        <h2 className="text-xl font-semibold">Prezzo</h2>
+                                        <p className="text-lg">{item.price}€</p>
+                                    </div>
+                                    <div className="flex justify-center">
+                                        <button onClick={() => addToCart(category, item.id)} className="btn w-32 text-xl font-semibold btn-modal border-none">Aggiungi</button>
                                     </div>
                                 </div>
                             </dialog>

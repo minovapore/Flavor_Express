@@ -236,7 +236,7 @@ export const products = {
         },
         {
         id: 17,
-        name: "Burger con Maiale Sfilacciato BBQ",
+        name: "Burger BBQ Pulled Pork",
         description: "Un gustoso burger di maiale sfilacciato al BBQ con coleslaw agrodolce.",
         ingredients: ["Maiale Sfilacciato", "Cipolla", "Salsa BBQ", "Cavolo rosso", "Lattuga"],
         image: pulledPork,

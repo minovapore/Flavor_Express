@@ -1,3 +1,12 @@
 .border-card{
     border: 3px solid var(--acc-color);
 }
+
+.bg-modal{
+    background-color: var(--det-color) !important;
+}
+
+.btn-modal{
+    background-color: var(--sec-color) !important;
+    color: var(--det-color) !important;
+}

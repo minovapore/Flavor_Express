@@ -1,6 +1,7 @@
 import '../style/Navbar.css';
 import '../style/Global.css';
 import logo from '../assets/img/logo.png';
+import { FaShoppingCart } from "react-icons/fa";
 
 export default function Navbar({toggleCartVisibility}){
 
@@ -20,7 +21,7 @@ export default function Navbar({toggleCartVisibility}){
         </div>
         <div className="navbar-end">
             <div>
-            <button className="me-5" onClick={toggleCartVisibility}>carrello</button>
+            <button className="me-5 text-xl flex items-center" onClick={toggleCartVisibility}><FaShoppingCart /></button>
             </div>
             <div className="btn btn-ghost xl:hidden md:hidden" onClick={()=>document.getElementById('my_modal_85').showModal()}>
             <svg

@@ -83,21 +83,21 @@ export default function Food({isCartVisible}){
             </div>
 
             {isCartVisible && (
-                <div className={"z-10 fixed p-4 right-0 top-[80px] bg-primary w-72 h-screen overflow-y-scroll"}>
+                <div className={"z-10 fixed p-4 right-0 bg-det txt-sec w-[500px] h-[650px] overflow-y-scroll"}>
                     <p className="text-2xl font-bold">Il tuo ordine: {getTotalAmount()}€</p>
                     {Object.keys(products).map(category => (
                         products[category].map(product => {
                             if (cartItems[category] && cartItems[category][product.id] !== 0) {
                                 return (
-                                    <div key={product.id} className="relative glass my-3 grid grid-cols-5 overflow-hidden">
-                                        <img className="rounded-lg w-[100px] h-[100px] object-cover col-span-2" src={product.image} alt="img" />
+                                    <div key={product.id} className="relative glass my-3 grid grid-cols-5 overflow-hidden rounded-lg">
+                                        <img className="rounded-lg w-[100px] h-[100px] col-span-2 object-cover" src={product.image} alt="img" />
                                         <div>
-                                            <p className="text-xl font-bold pl-2">{cartItems[category][product.id]} X </p>
-                                            <p className="flex items-center space-x-4">{product.name}</p>
-                                            <p>{product.price}€</p>
+                                            <p className="text-xl font-bold">{cartItems[category][product.id]} X </p>
+                                            <p className="line-clamp-1 my-2 text-lg w-full font-semibold">{product.name}</p>
+                                            <p className="font-semibold">{product.price}€</p>
                                         </div>
                                         <div className="absolute right-0 bottom-0 gap-2 font-bold">
-                                            <button onClick={() => removeFromCart(category, product.id)} className="text-red-600 bg-red-300 p-2 rounded">Rimuovi</button>
+                                            <button onClick={() => removeFromCart(category, product.id)} className="txt-sec bg-acc p-2 rounded-l-lg">Rimuovi</button>
                                         </div>
                                     </div>
                                 );
