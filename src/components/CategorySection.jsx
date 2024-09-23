@@ -10,7 +10,7 @@ import '../style/CategorySection.css';
 
 export default function CategorySection({category, items, addToCart}){
     return(
-        <div className="bg-sec">
+        <div className="bg-sec w-full">
             <h2 id={category} className="text-3xl flex p-4 w-full text-start font-archivio">
                 {category.charAt(0).toUpperCase() + category.slice(1)}
                 {category === 'pizze' && <li className="flex mx-5 items-center"><IoPizzaOutline/></li>}
@@ -22,9 +22,9 @@ export default function CategorySection({category, items, addToCart}){
                 {category === 'bevande' && <li className="flex mx-5"><RiDrinks2Line /></li>}
             </h2>
             
-            <div className="grid xl:grid-cols-3 place-items-center gap-5 my-5">
+            <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center gap-5 my-5">
                 {items.map(item => (
-                    <div key={item.id} className="w-[470px] h-[225px] p-2 bg-sec txt-det rounded-lg transition-all duration-200 hover:scale-105 border-card">
+                    <div key={item.id} className="xl:w-[470px] xl:h-[225px] md:w-[470px] md:h-[225px] w-[400px] h-[225px] p-2 bg-sec txt-det rounded-lg transition-all duration-200 hover:scale-105 border-card">
                         <a role="button" onClick={()=>document.getElementById(`my_modal_${item.id}`).showModal()}>
                             <div className="flex items-center justify-between my-1">
                                 <div className="w-[250px] flex flex-col justify-between">

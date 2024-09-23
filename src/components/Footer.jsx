@@ -6,7 +6,7 @@ import '../style/Footer.css'
 
 export default function Footer(){
     return(
-        <footer className="w-auto footer footer-center bg-sec txt-sec p-10 border-top">
+        <footer className="w-auto footer footer-center bg-det p-10 txt-sec border-top">
             <aside>
                 <img src={logo} alt="" />
                 <p>Copyright © {new Date().getFullYear()} - Flavor Express</p>

@@ -74,7 +74,7 @@ export default function Food({isCartVisible}){
     return(
         <div className="bg-sec txt-det max-w-[1600px] place-items-center lg:mx-auto flex flex-col gap-12">
             {/* Bottoni di navigazione */}
-            <div className="sticky top-0  z-10 bg-sec w-full py-5 flex gap-8 justify-center my-2 font-oddval text-xl">
+            <div className="sticky top-0  z-10 bg-sec w-auto py-5 flex xl:gap-8 md:gap-8 gap-2 justify-center my-2 font-oddval xl:text-xl md:text-xl text-md">
                 {categories.map(category => (
                     <button
                     key={category}
@@ -105,6 +105,9 @@ export default function Food({isCartVisible}){
                             return null; // Return null if the product is not in the cart
                         })
                     ))}
+                    <div className="flex justify-center">
+                        <button className="btn btn-cart-order border-none font-bold text-lg">Prosegui con l'ordine</button>
+                    </div>
                 </div>
             )}
 
@@ -118,7 +121,7 @@ export default function Food({isCartVisible}){
                 addToCart={addToCart}
                 />
             ))}
-            </div>
+            </div> 
         </div>
     );
 }

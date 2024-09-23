@@ -62,13 +62,6 @@
     }
   }
 
-  .sushi-bg{
-    background-image: url(../assets/img/sushi.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    /* background-size: 500px; */
-    }
-
   .animation{
     animation: movimentoAltoBasso 2s infinite alternate;
   }
@@ -95,6 +88,10 @@
   .btn-order{
     background-color: var(--acc-color) !important;
     border: none;
+  }
+
+  .btn-app{
+    background-color: var(--det-color)
   }
 
   
