@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Menu from './pages/Menu.jsx';
+import Form from './pages/Form.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/menù",
     element: <div><Menu/></div>,
+  },
+  {
+    path: "/ordine",
+    element: <div><Form/></div>,
   },
 ]);
 

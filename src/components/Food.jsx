@@ -74,7 +74,7 @@ export default function Food({isCartVisible}){
     return(
         <div className="bg-sec txt-det max-w-[1600px] place-items-center lg:mx-auto flex flex-col gap-12">
             {/* Bottoni di navigazione */}
-            <div className="sticky top-0  z-10 bg-sec w-auto py-5 flex xl:gap-8 md:gap-8 gap-2 justify-center my-2 font-oddval xl:text-xl md:text-xl text-md">
+            <div className="sticky top-0  z-10 bg-sec w-full py-5 flex xl:gap-8 md:gap-8 gap-2 justify-center my-2 font-oddval xl:text-xl md:text-xl text-md">
                 {categories.map(category => (
                     <button
                     key={category}
@@ -83,7 +83,7 @@ export default function Food({isCartVisible}){
             </div>
 
             {isCartVisible && (
-                <div className={"z-10 fixed p-4 right-0 bg-det txt-sec w-[500px] h-[650px] overflow-y-scroll"}>
+                <div className={"z-10 fixed p-4 right-0 bg-det txt-sec xl:w-[500px] xl:h-[650px] md:w-[500px] md:h-[650px] w-[300px] h-[650px] overflow-y-scroll"}>
                     <p className="text-2xl font-bold">Il tuo ordine: {getTotalAmount()}€</p>
                     {Object.keys(products).map(category => (
                         products[category].map(product => {
@@ -106,7 +106,9 @@ export default function Food({isCartVisible}){
                         })
                     ))}
                     <div className="flex justify-center">
-                        <button className="btn btn-cart-order border-none font-bold text-lg">Prosegui con l'ordine</button>
+                        {getTotalAmount() !== 0 ? (
+                            <a href="/ordine"><button className="btn btn-cart-order border-none font-bold text-lg">Prosegui con l'ordine</button></a>
+                        ):null}
                     </div>
                 </div>
             )}

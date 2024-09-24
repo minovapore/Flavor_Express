@@ -12,13 +12,13 @@ export default function Navbar({toggleCartVisibility}){
             <a href="/"><img src={logo} alt="Flavor Express" className='w-40 z-auto'/></a>
             </div>
         </div>
-        <div className="navbar-center hidden lg:flex md:flex">
+        {/* <div className="navbar-center hidden lg:flex md:flex">
           <ul className="font-oddval menu menu-horizontal text-lg xl:gap-32 md:gap-24">
-              <li>item 1</li>
-              <li>item 2</li>
-              <li>item 3</li>
+              <li><a href="#ordina">ordina</a></li>
+              <li><a href="#chi-siamo">chi siamo</a></li>
+              <li><a href="#app">scarica l'app</a></li>
           </ul>
-        </div>
+        </div> */}
         <div className="navbar-end">
             <div>
             <button className="me-5 text-xl flex items-center" onClick={toggleCartVisibility}><FaShoppingCart /></button>

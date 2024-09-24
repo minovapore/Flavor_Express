@@ -9,7 +9,8 @@ import bevande from '../assets/img/bevande.png';
 
 export default function Carousel(){
     return (
-        <div className="xl:flex md:flex justify-center my-16 hidden">
+      <>        
+      <div className="xl:flex md:flex justify-center my-16 hidden">
             <div className="carousel xl:w-[1100px] md:w-[950px] h-[300px]">
                 <div id="slide1" className="carousel-item  relative bg-sec w-full flex justify-center items-center">
                     <div className='xl:w-[300px] md:w-[250px] h-[220px] bord-card-carousel rounded-2xl'>
@@ -67,5 +68,45 @@ export default function Carousel(){
                 </div>
             </div>
         </div>
+
+        {/* CAROUSEL MOBILE */}
+        <div className="carousel rounded-none xl:hidden md:hidden w-full gap-3  my-16">
+          <div className="carousel-item bord-card-carousel w-[250px] h-[200px] rounded-2xl">
+            <img
+              src={panino}
+              alt="Burger" />
+          </div>
+          <div className="carousel-item bord-card-carousel w-[250px] h-[200px] rounded-2xl">
+            <img
+              src={pizza2}
+              alt="Burger" />
+          </div>
+          <div className="carousel-item bord-card-carousel w-[250px] h-[200px] rounded-2xl">
+            <img
+              src={sushi}
+              alt="Burger" />
+          </div>
+          <div className="carousel-item bord-card-carousel w-[250px] h-[200px] rounded-2xl">
+            <img
+              src={fritti}
+              alt="Burger" />
+          </div>
+          <div className="carousel-item bord-card-carousel w-[250px] h-[200px] rounded-2xl">
+            <img
+              src={insalata}
+              alt="Burger" />
+          </div>
+          <div className="carousel-item bord-card-carousel w-[250px] h-[200px] rounded-2xl">
+            <img
+              src={dolci}
+              alt="Burger" />
+          </div>
+          <div className="carousel-item bord-card-carousel w-[250px] h-[200px] rounded-2xl">
+            <img
+              src={bevande}
+              alt="Burger" />
+          </div>
+        </div>
+      </>
     );
 }

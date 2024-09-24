@@ -1,7 +1,7 @@
 import logo from '../assets/img/logo.png';
-import instagram from '../assets/img/instagram.png';
-import facebook from '../assets/img/facebook.png';
-import youtube from '../assets/img/youtube.png';
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 import '../style/Footer.css'
 
 export default function Footer(){
@@ -13,14 +13,14 @@ export default function Footer(){
             </aside>
             <nav>
                 <div className="grid grid-flow-col gap-4">
-                    <a>
-                       <img src={instagram} alt="instagram" />
+                    <a className='text-3xl'>
+                        <FaInstagram />
                     </a>
-                    <a>
-                        <img src={facebook} alt="" />
+                    <a className='text-3xl'>
+                        <FaFacebook />
                     </a>
-                    <a>
-                        <img src={youtube} alt="" />
+                    <a className='text-3xl'>
+                        <FaTiktok />
                     </a>
                 </div>
             </nav>
