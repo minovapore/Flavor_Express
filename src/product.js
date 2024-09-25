@@ -205,7 +205,7 @@ export const products = {
         ingredients: ["Hamburger di Manzo", "Lattuga", "Pomodoro", "Cheddar", "Cetriolini", "Ketchup", "Panino al Sesamo"],
         image: classic,
         category: "Manzo",
-        price: 8.99
+        price: 9.00
         },
         {
         id: 14,
@@ -214,7 +214,7 @@ export const products = {
         ingredients: ["Doppio Hamburger di Manzo", "Bacon", "Cheddar", "Maionese", "Salsa BBQ", "Cetroli", "Cipolla"],
         image: double,
         category: "Manzo",
-        price: 12.99
+        price: 12.50
         },
         {
         id: 15,
@@ -223,7 +223,7 @@ export const products = {
         ingredients: ["Pollo fritto", "Avocado", "Cavolo rosso", "Pomodoro", "Cheddar"],
         image: avocadoChicken,
         category: "Chicken",
-        price: 9.49
+        price: 9.50
         },
         {
         id: 16,
@@ -232,7 +232,7 @@ export const products = {
         ingredients: ["Hamburger di Manzo", "Bacon", "Jalapeños", "Lattuga", "Salsa Sriracha", "Cipolla", "Formaggio svizzero", "Pomodoro"],
         image: spicySriracha,
         category: "Manzo",
-        price: 10.49
+        price: 10.50
         },
         {
         id: 17,
@@ -241,7 +241,7 @@ export const products = {
         ingredients: ["Maiale Sfilacciato", "Cipolla", "Salsa BBQ", "Cavolo rosso", "Lattuga"],
         image: pulledPork,
         category: "Maiale",
-        price: 10.99
+        price: 11.00
         },
         {
         id: 18,
@@ -250,7 +250,7 @@ export const products = {
         ingredients: ["Hamburger di Manzo", "Formaggio svizzero", "Funghi Saltati", "Lattuga", "Maionese all'Aglio"],
         image: mashroom,
         category: "Manzo",
-        price: 9.99
+        price: 10.00
         },
         {
         id: 19,
@@ -259,7 +259,7 @@ export const products = {
         ingredients: ["Hamburger di Fagioli Neri", "Avocado", "Lattuga", "Pomodoro", "Cipolla Rossa", "Maionese Vegana"],
         image: vegan,
         category: "Vegano",
-        price: 8.49
+        price: 8.50
         },
         {
         id: 20,
@@ -268,7 +268,7 @@ export const products = {
         ingredients: ["Filetto di Pesce Impanato", "Lattuga", "Salsa Tartara"],
         image: fish,
         category: "Pesce",
-        price: 8.99
+        price: 9.00
         },
         {
         id: 21,
@@ -278,7 +278,7 @@ export const products = {
         "Cipolla rossa", "Salsa Tzatziki"],
         image: lamb,
         category: "Agnello",
-        price: 11.99
+        price: 12.00
         },
         {
         id: 22,
@@ -287,7 +287,7 @@ export const products = {
         ingredients: ["Pollo Fritto", "Salsa Buffalo", "Lattuga", "Cetriolini",],
         image: buffaloChicken,
         category: "Pollo",
-        price: 9.99
+        price: 10.00
         },
         {
         id: 23,
@@ -296,7 +296,7 @@ export const products = {
         ingredients: ["Hamburger di Tacchino", "Rucola", "Formaggio fuso", "Salsa di Mirtilli Rossi",],
         image: turkey,
         category: "Tacchino",
-        price: 9.49
+        price: 9.50
         },
         {
         id: 24,
@@ -305,7 +305,7 @@ export const products = {
         ingredients: ["Halloumi Grigliato", "Zucchine", "Cetrioli", "Rucola"],
         image: halloumi,
         category: "Vegetariano",
-        price: 9.99
+        price: 9.50
         }
 ],
     // Sushi

@@ -62,7 +62,7 @@ export default function Food({isCartVisible}){
             for (const id in cartItems[category]){
             if(cartItems[category][id] > 0){
                 const itemInfo = products[category].find(item => item.id === Number(id));
-                totalAmount += Math.floor(cartItems[category][id] * itemInfo.price);
+                totalAmount += cartItems[category][id] * itemInfo.price;
             }
         }
     }
@@ -90,14 +90,23 @@ export default function Food({isCartVisible}){
                             if (cartItems[category] && cartItems[category][product.id] !== 0) {
                                 return (
                                     <div key={product.id} className="relative glass my-3 grid grid-cols-5 overflow-hidden rounded-lg">
-                                        <img className="rounded-lg w-[100px] h-[100px] col-span-2 object-cover" src={product.image} alt="img" />
+                                        <img className="rounded-lg w-[100px] h-[100px] col-span-2 object-contain" src={product.image} alt="img" />
                                         <div>
                                             <p className="text-xl font-bold">{cartItems[category][product.id]} X </p>
-                                            <p className="line-clamp-1 my-2 text-lg w-full font-semibold">{product.name}</p>
+                                            <p className="line-clamp-1 my-2 text-lg font-semibold">{product.name}</p>
                                             <p className="font-semibold">{product.price}€</p>
                                         </div>
+                                        <div className="absolute top-0 right-0 flex items-center gap-2">
+                                            <button onClick={() => setCartItems(cartItems=>({
+                                                ...cartItems, [category]:{
+                                                    ...cartItems[category], [product.id]: Math.max((cartItems[category][product.id] || 0) -1, 0)
+                                                }
+                                            }))} className="txt-sec bg-acc p-2 rounded-l-lg">-</button>
+                                            <span>{cartItems[category][product.id]}</span>
+                                            <button onClick={()=>addToCart(category, product.id)} className="txt-sec bg-acc p-2 rounded-r-lg">+</button>
+                                        </div>
                                         <div className="absolute right-0 bottom-0 gap-2 font-bold">
-                                            <button onClick={() => removeFromCart(category, product.id)} className="txt-sec bg-acc p-2 rounded-l-lg">Rimuovi</button>
+                                            <button onClick={() => removeFromCart(category, product.id)} className="txt-sec bg-acc p-2 rounded-lg">Rimuovi</button>
                                         </div>
                                     </div>
                                 );

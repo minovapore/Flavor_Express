@@ -7,7 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Menu from './pages/Menu.jsx';
-import Form from './pages/Form.jsx';
+import Checkout from './pages/Checkout.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/ordine",
-    element: <div><Form/></div>,
+    element: <div><Checkout/></div>,
   },
 ]);
 

@@ -59,15 +59,15 @@ export default function Hero(){
                 <div className='flex justify-center'>
                     <div className='grid xl:grid-cols-3 md:grid-cols-3 gap-10'>
                         <div>
-                            <img src={rider} alt="" className='w-[300px] rounded-xl'/>
+                            <img src={rider} alt="" className='w-[300px] rounded-xl border-card'/>
                             <h3 className='flex justify-center text-2xl txt-det font-oddval my-3'>Diventa un rider</h3>
                         </div>
                         <div>
-                            <img src={chef} alt="" className='w-[300px]  rounded-xl'/>
+                            <img src={chef} alt="" className='w-[300px] rounded-xl border-card'/>
                             <h3 className='flex justify-center text-2xl txt-det font-oddval my-3'>Diventa partner</h3>
                         </div>
                         <div>
-                            <img src={work} alt="" className='w-[300px]  rounded-xl'/>
+                            <img src={work} alt="" className='w-[300px] rounded-xl border-card'/>
                             <h3 className='flex justify-center text-2xl txt-det font-oddval my-3'>Lavora con noi</h3>
                         </div>
                     </div>

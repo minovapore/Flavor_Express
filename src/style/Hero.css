@@ -96,4 +96,7 @@
     /* background-color: var(--acc-color) */
   }
 
+  .border-card{
+    border: 3px solid var(--acc-color);
+  }
   
