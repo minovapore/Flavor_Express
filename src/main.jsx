@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Menu from './pages/Menu.jsx';
 import Checkout from './pages/Checkout.jsx';
+import Payment from './pages/Payment.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/ordine",
     element: <div><Checkout/></div>,
+  },
+  {
+    path: "/pagamento",
+    element: <div><Payment/></div>,
   },
 ]);
 

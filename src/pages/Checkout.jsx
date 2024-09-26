@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../style/Checkout.css'
 import { products } from '../product';
+import { useNavigate } from 'react-router-dom';
 
 export default function Checkout(){
     // Cerca di recuperare i dati del carrello dal localStorage
@@ -67,8 +68,8 @@ export default function Checkout(){
     const [address, setAddress] = useState('');
     const [number, setNumber] = useState('');
 
-    const [successAlert, setSuccessAlert] = useState(false);
     const [errorAlert, setErrorAlert] = useState(false);
+    const navigate = useNavigate();
 
     //Funzione per gestire l'invio del form
     const handleSubmit = (e) => { e.preventDefault(); //previene il comportamento predefinito del form
@@ -76,7 +77,6 @@ export default function Checkout(){
     //Verifica se tutti i campi sono compilati
     if(!name || !city || !address || !number){
         setErrorAlert(true);
-        setSuccessAlert(false);
         setTimeout(()=>{
             setErrorAlert(false);
         }, 10000);
@@ -89,15 +89,8 @@ export default function Checkout(){
     setAddress('');
     setNumber('');
 
-    //Alert di conferma
-    setSuccessAlert(true);
-    setErrorAlert(false);
-    //Nascondi l'alert dopo 10 secondi
-    setTimeout(() => {
-        setSuccessAlert(false);
-    }, 10000);
+    navigate('/pagamento');
     }
-
     return(
         <>
         <form onSubmit={handleSubmit}>
@@ -160,22 +153,6 @@ export default function Checkout(){
                                     <input type="number"  name='number' value={number} onChange={(e)=>setNumber(e.target.value)} className="grow font-oddval" placeholder="Cellulare" />
                                 </label>
                             </div>
-                            {successAlert && (
-                                <div role="alert" className="flex alert alert-success xl:mb-8 md:mb-8 h-14">
-                                    <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6 shrink-0 stroke-current text-white"
-                                    fill="none"
-                                    viewBox="0 0 24 24">
-                                    <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <span className="text-white text-lg font-semibold">Prenotazione avvenuta con successo</span>
-                                </div>
-                            )}
                             {errorAlert && (
                                 <div role="alert" className="flex alert alert-error xl:mb-8 md:mb-8 h-14">
                                      <svg
@@ -196,7 +173,7 @@ export default function Checkout(){
                 </div>
             </div>
             <div className='my-10 flex justify-center'> 
-                <button type='submit' className="bg-sec w-40 h-10 rounded-lg font-oddval txt-det">Conferma ordine</button>
+                <a href="/pagamento"><button type='submit' className="bg-sec w-40 h-10 rounded-lg font-oddval txt-det">Conferma ordine</button></a>
             </div>
         </div>
         </form>
