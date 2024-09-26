@@ -1,3 +1,7 @@
 .bord-form{
     border: 2px solid var(--acc-color);
 }
+
+.total-bord{
+    border-top: 2px solid var(--acc-color);
+}
