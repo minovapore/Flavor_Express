@@ -1,0 +1,11 @@
+.border-check {
+    border: 2px solid var(--acc-color);
+}
+
+.theme-check {
+    background-color:  var(--det-color);
+}
+
+.check-color{
+    --chkfg: var(--acc-color);
+}

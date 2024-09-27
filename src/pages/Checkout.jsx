@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import '../style/Checkout.css'
 import { products } from '../product';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar'
 
 export default function Checkout(){
     // Cerca di recuperare i dati del carrello dal localStorage
@@ -93,12 +95,13 @@ export default function Checkout(){
     }
     return(
         <>
+        <Navbar/>
+        <div className='bg-sec w-full h-screen'>
         <form onSubmit={handleSubmit}>
-        <div className='bg-det w-full h-screen'>
             <div className='flex justify-center'>
-                <h2 className='xl:text-4xl md:text-4xl text-3xl font-archivio txt-sec my-5'>Completa il tuo ordine</h2>
+                <h2 className='xl:text-4xl md:text-4xl text-3xl font-archivio txt-det my-5'>Completa il tuo ordine</h2>
             </div>
-            <div className='bord-form xl:w-[1200px] xl:h-[500px] md:h-[500px] h-[500px] mx-auto rounded-xl overflow-y-scroll'>
+            <div className='bord-form xl:w-[1200px] md:w-[900px] xl:h-[500px] md:h-[500px] h-[500px] mx-auto rounded-xl overflow-y-scroll'>
                 <div className='grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1'>
                     <div className='mx-auto my-5'>
                         <h2 className='txt-sec font-oddval text-2xl'>Riepilogo ordine</h2>
@@ -173,10 +176,11 @@ export default function Checkout(){
                 </div>
             </div>
             <div className='my-10 flex justify-center'> 
-                <a href="/pagamento"><button type='submit' className="bg-sec w-40 h-10 rounded-lg font-oddval txt-det">Conferma ordine</button></a>
+                <a href="/pagamento"><button type='submit' className="bg-acc w-40 h-10 rounded-lg font-oddval txt-det">Conferma ordine</button></a>
             </div>
-        </div>
         </form>
+        </div>
+        <Footer/>
         </>
     );
 }

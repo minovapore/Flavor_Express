@@ -9,6 +9,7 @@ import {
 import Menu from './pages/Menu.jsx';
 import Checkout from './pages/Checkout.jsx';
 import Payment from './pages/Payment.jsx'
+import LavoraConNoi from './pages/LavoraConNoi.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/pagamento",
     element: <div><Payment/></div>,
+  },
+  {
+    path: "/lavora-con-noi",
+    element: <div><LavoraConNoi/></div>,
   },
 ]);
 

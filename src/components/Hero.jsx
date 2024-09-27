@@ -73,7 +73,7 @@ export default function Hero(){
                     </div>
                 </div>
                 <div className='flex justify-center'>
-                <   button className='my-10 bg-acc w-32 h-12 rounded-lg text-xl font-oddval font-semibold txt-det'>Inizia ora</button>
+                <a href="/lavora-con-noi"><button className='my-10 bg-acc w-32 h-12 rounded-lg text-xl font-oddval font-semibold txt-det'>Inizia ora</button></a>
                 </div>
             </div>
         </div>
