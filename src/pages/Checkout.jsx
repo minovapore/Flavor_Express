@@ -135,25 +135,25 @@ export default function Checkout(){
                             <div>
                                 <h3 className='txt-sec font-oddval text-xl'>Nome</h3>
                                 <label className="input input-bordered flex items-center gap-2">
-                                    <input type="text" name='name' value={name} onChange={(e)=>setName(e.target.value)} className="grow font-oddval" placeholder="Nome" />
+                                    <input type="text" name='name' value={name} onChange={(e)=>setName(e.target.value)} className="grow font-oddval" placeholder="Nome" required/>
                                 </label>
                             </div>
                             <div className='my-5'>
                                 <h3 className='txt-sec font-oddval text-xl'>Città</h3>
                                 <label className="input input-bordered flex items-center gap-2">
-                                    <input type="text"  name='city' value={city} onChange={(e)=>setCity(e.target.value)} className="grow font-oddval" placeholder="Città" />
+                                    <input type="text"  name='city' value={city} onChange={(e)=>setCity(e.target.value)} className="grow font-oddval" placeholder="Città" required/>
                                 </label>
                             </div>
                             <div>
                                 <h3 className='txt-sec font-oddval text-xl'>Indirizzo</h3>
                                 <label className="input input-bordered flex items-center gap-2">
-                                    <input type="text"  name='address' value={address} onChange={(e)=>setAddress(e.target.value)} className="grow font-oddval" placeholder="Indirizzo" />
+                                    <input type="text"  name='address' value={address} onChange={(e)=>setAddress(e.target.value)} className="grow font-oddval" placeholder="Indirizzo" required/>
                                 </label>
                             </div>
                             <div className='my-5'>
                                 <h3 className='txt-sec font-oddval text-xl'>Cellulare</h3>
                                 <label className="input input-bordered flex items-center gap-2">
-                                    <input type="number"  name='number' value={number} onChange={(e)=>setNumber(e.target.value)} className="grow font-oddval" placeholder="Cellulare" />
+                                    <input type="number"  name='number' value={number} onChange={(e)=>setNumber(e.target.value)} className="grow font-oddval" placeholder="Cellulare" required/>
                                 </label>
                             </div>
                             {errorAlert && (

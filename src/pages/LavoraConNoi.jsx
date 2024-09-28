@@ -59,12 +59,12 @@ export default function LavoraConNoi(){
     return(
         <>
         <Navbar/>
-        <div className="bg-sec w-full md:h-screen">
+        <div className="bg-sec w-full xl:h-[800px] h-screen">
             <form onSubmit={handleSubmit}>
             <div className='flex justify-center'>
                 <h2 className='xl:text-4xl md:text-4xl text-3xl font-archivio txt-det my-5 text-center'>Lavora con noi o <br /> diventa partner</h2>
             </div>
-            <div className='bord-form xl:w-[600px] md:w-[600px] xl:h-[575px] md:h-[500px] h-[700px] mx-auto rounded-xl px-5'>
+            <div className='bord-form xl:w-[600px] md:w-[600px] xl:h-[575px] md:h-[575px] h-[650px] mx-auto rounded-xl px-5'>
                 <div className='flex justify-center my-3'>
                     <h2 className='font-oddval text-xl txt-sec mx-2'>Scegli cosa vuoi diventare</h2>
                 </div>
@@ -145,9 +145,9 @@ export default function LavoraConNoi(){
                         <span className="text-white text-lg font-semibold">Ordine avvenuto con successo</span>
                     </div>
                 )}
-            <div className='flex justify-center'>
-                <button className='w-32 h-10 bg-acc rounded-lg font-oddval txt-det my-5' onClick={resetCheckboxes}>Invia</button>
             </div>
+            <div className='flex justify-center my-5'>
+                <button className='w-32 h-10 bg-acc rounded-lg font-oddval txt-det mb-5' onClick={resetCheckboxes}>Invia</button>
             </div>
             </form>
         </div>

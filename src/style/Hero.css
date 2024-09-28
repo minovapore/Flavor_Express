@@ -1,12 +1,12 @@
 .bg-banner{
-    background-image: url(../assets/img/hero-img.jpg);
+    background-image: url(../assets/img/hero.png);
     background-size: cover;
     background-position: center;
 }
 
 @media screen and (min-width:768px){
     .bg-banner{
-        background-image: url(../assets/img/hero-img.jpg);
+        background-image: url(../assets/img/hero.png);
         background-size: cover;
         background-position: center;
     }
@@ -14,7 +14,7 @@
 
 @media screen and (max-width:767px) {
     .bg-banner{
-        background-image: url(../assets/img/hero-img.jpg);
+        background-image: url(../assets/img/hero.png);
         background-position: cover;
         background-position: center;
     }
@@ -85,10 +85,15 @@
     -webkit-text-stroke-color: var(--det-color);
   }
 
+  .txt-border3{
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: var(--det-color);
+  }
+
   .btn-order{
     background-color: var(--acc-color) !important;
     border: none;
-    color: var(--sec-color)
+    color: var(--det-color)
   }
 
   .btn-app{

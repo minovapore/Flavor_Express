@@ -54,7 +54,7 @@ export default function Payment(){
                 <div className='flex justify-center'>
                     <h2 className='xl:text-4xl md:text-4xl text-3xl font-archivio txt-det my-5'>Conferma ordine</h2>
                 </div>
-                <div className='bord-form xl:w-[600px] md:w-[600px] xl:h-[500px] md:h-[500px] h-[700px] mx-auto rounded-xl px-5'>
+                <div className='bord-form xl:w-[600px] md:w-[600px] xl:h-[525px] md:h-[550px] h-[670px] mx-auto rounded-xl px-5'>
                     <div className='xl:flex xl:justify-between md:flex md:justify-between my-3'>
                         <div>
                             <h3 className='txt-sec font-oddval text-xl'>Nome</h3>

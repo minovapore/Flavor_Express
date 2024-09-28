@@ -10,13 +10,24 @@ import { FaGooglePlay } from "react-icons/fa";
 import rider from '../assets/img/rider.png';
 import work from '../assets/img/work.png';
 import chef from '../assets/img/chef.png';
+import hero from '../assets/img/hero.png';
 
 
 export default function Hero(){
     return(
         <>
-        <div className="bg-banner xl:h-[650px] md:h-[500px] h-[250px] text-white xl:flex md:flex xl:flex-row md:flex-row col col-span-2">
-           <h2 className='flex items-center mx-auto xl:text-9xl md:text-8xl text-4xl text-center font-archivio txt-det'>FLAVOR EXPRESS</h2>
+        <div className='bg-det w-full h-auto'>
+        <div className="bg-sec xl:w-11/12 md:w-11/12 mx-auto xl:h-[600px] md:h-[500px] h-[400px] text-white grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1">
+        <div className='flex items-center justify-center'>
+            <div>
+                <h2 className='xl:text-6xl md:text-6xl text-4xl text-center font-archivio txt-det txt-border3 txt-sec'>FLAVOR EXPRESS</h2>
+                <h2 className='xl:text-6xl md:text-6xl text-4xl text-center font-archivio txt-det my-5'>FLAVOR EXPRESS</h2>
+                <h2 className='xl:text-6xl md:text-6xl text-4xl text-center font-archivio txt-det txt-border3 txt-sec'>FLAVOR EXPRESS</h2>
+            </div>
+        </div>
+        <div className='flex items-center justify-center'>
+           <img src={hero} alt=""/>
+        </div>
         </div>
         <div className='bg-det relative h-[650px]'>
             <InfiniteScroll/>
@@ -34,7 +45,7 @@ export default function Hero(){
             <p className='txt-det flex justify-center xl:text-4xl md:text-4xl text-2xl font-archivio text-center my-5'>Flavor Express consiste in un menù interessante e vario</p>
             <Carousel/>
             <div className='flex justify-center'>
-                <a href="/menù"><button className='h-12 w-32 rounded-lg btn-order text-xl font-oddval font-semibold txt-det'>Ordina</button></a>
+                <a href="/menù"><button className='h-12 w-32 rounded-lg btn-order text-xl font-oddval font-semibold'>Ordina</button></a>
             </div>
             <div className='my-20 w-11/12 h-[500px] bg-det txt-sec mx-auto grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1'>
                 <div className='flex justify-center items-center  xl:my-0 md:-my-0 my-10' id='app'>
@@ -76,6 +87,7 @@ export default function Hero(){
                 <a href="/lavora-con-noi"><button className='my-10 bg-acc w-32 h-12 rounded-lg text-xl font-oddval font-semibold txt-det'>Inizia ora</button></a>
                 </div>
             </div>
+        </div>
         </div>
         </>
     );
