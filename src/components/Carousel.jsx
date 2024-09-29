@@ -70,7 +70,7 @@ export default function Carousel(){
         </div>
 
         {/* CAROUSEL MOBILE */}
-        <div className="carousel rounded-none xl:hidden md:hidden w-full gap-3  my-16">
+        <div className="data-bs-carousel carousel rounded-none xl:hidden md:hidden w-full gap-3  my-16">
           <div className="carousel-item bord-card-carousel w-[250px] h-[200px] rounded-2xl">
             <img
               src={panino}

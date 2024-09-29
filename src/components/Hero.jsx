@@ -21,7 +21,7 @@ export default function Hero(){
         <div className='flex items-center justify-center'>
             <div>
                 <h2 className='xl:text-6xl md:text-6xl text-4xl text-center font-archivio txt-det txt-border3 txt-sec'>FLAVOR EXPRESS</h2>
-                <h2 className='xl:text-6xl md:text-6xl text-4xl text-center font-archivio txt-det my-5'>FLAVOR EXPRESS</h2>
+                <h2 className='xl:text-6xl md:text-6xl text-4xl text-center font-archivio my-5 title-animation'>FLAVOR EXPRESS</h2>
                 <h2 className='xl:text-6xl md:text-6xl text-4xl text-center font-archivio txt-det txt-border3 txt-sec'>FLAVOR EXPRESS</h2>
             </div>
         </div>
@@ -31,7 +31,7 @@ export default function Hero(){
         </div>
         <div className='bg-det relative h-[650px]'>
             <InfiniteScroll/>
-            <div className='relative w-full h-[600px]' id='chi-siamo'>
+            <div className='relative w-full h-[600px] about-us-animation' id='chi-siamo'>
                 <div className='absolute inset-0 z-0 animation'>
                     <img src={burger} alt="" className='object-cover xl:my-0 md:my-20 xl:w-[250px] md:w-[250px] w-[150px]'/>
                     <img src={pizza} alt="" className='object-cover ml-auto xl:-my-32 md:-my-64 my-48 rotate-12 me-9 xl:w-[350px] md:w-[300px] w-[150px]'/>
@@ -41,11 +41,13 @@ export default function Hero(){
             </div>
         </div>
         <div className='w-auto h-auto bg-sec' id='ordina'>
-            <h2 className='txt-border2 txt-sec flex justify-center text-center xl:text-6xl md:text-6xl text-5xl font-archivio'>PRONTO A SODDISFARE LA TUA FAME?</h2>
-            <p className='txt-det flex justify-center xl:text-4xl md:text-4xl text-2xl font-archivio text-center my-5'>Flavor Express consiste in un menù interessante e vario</p>
-            <Carousel/>
-            <div className='flex justify-center'>
-                <a href="/menù"><button className='h-12 w-32 rounded-lg btn-order text-xl font-oddval font-semibold'>Ordina</button></a>
+            <div className='carousel-section-animation'>
+                <h2 className='txt-border2 txt-sec flex justify-center text-center xl:text-6xl md:text-6xl text-5xl font-archivio'>PRONTO A SODDISFARE LA TUA FAME?</h2>
+                <p className='txt-det flex justify-center xl:text-4xl md:text-4xl text-2xl font-archivio text-center my-5'>Flavor Express consiste in un menù interessante e vario</p>
+                <Carousel/>
+                <div className='flex justify-center'>
+                    <a href="/menù"><button className='h-12 w-32 rounded-lg btn-order text-xl font-oddval font-semibold'>Ordina</button></a>
+                </div>
             </div>
             <div className='my-20 w-11/12 h-[500px] bg-det txt-sec mx-auto grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1'>
                 <div className='flex justify-center items-center  xl:my-0 md:-my-0 my-10' id='app'>
@@ -59,7 +61,7 @@ export default function Hero(){
                             </div>
                         </div>
                 </div>
-                <div className='flex justify-center items-center'>
+                <div className='flex justify-center items-center iphone-mockup-animation'>
                     <img src={mockup} alt="" />
                 </div>
             </div>
@@ -69,7 +71,7 @@ export default function Hero(){
                 </div>
                 <div className='flex justify-center'>
                     <div className='grid xl:grid-cols-3 md:grid-cols-3 gap-10'>
-                        <div>
+                        <div className='card-animation'>
                             <img src={rider} alt="" className='w-[300px] rounded-xl border-card'/>
                             <h3 className='flex justify-center text-2xl txt-det font-oddval my-3'>Diventa un rider</h3>
                         </div>
@@ -77,7 +79,7 @@ export default function Hero(){
                             <img src={chef} alt="" className='w-[300px] rounded-xl border-card'/>
                             <h3 className='flex justify-center text-2xl txt-det font-oddval my-3'>Diventa partner</h3>
                         </div>
-                        <div>
+                        <div className='card-animation2'>
                             <img src={work} alt="" className='w-[300px] rounded-xl border-card'/>
                             <h3 className='flex justify-center text-2xl txt-det font-oddval my-3'>Lavora con noi</h3>
                         </div>
