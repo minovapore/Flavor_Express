@@ -36,10 +36,21 @@ export default function Food({isCartVisible}){
     }
 
     const [cartItems, setCartItems] = useState(fromLocalStorage);
+    const [cartCount, setCartCount] = useState(0); // Stato per il numero totale di articoli
 
 
     useEffect(() => {
         localStorage.setItem('cart', JSON.stringify(cartItems));
+    
+
+    // Calcola il numero totale di articoli nel carrello
+    let totalItems = 0;
+    for(const category in cartItems){
+        for (const id in cartItems[category]){
+            totalItems += cartItems[category][id]; // Somma gli articoli in ogni categoria
+            }
+        }
+        setCartCount(totalItems); // Aggiorna lo stato del conteggio
     }, [cartItems]);
 
     const addToCart = (category, id) => {
@@ -72,9 +83,11 @@ export default function Food({isCartVisible}){
     const categories = products ? Object.keys(products) : []; // ['pizze', 'panini', 'sushi', ...]
     
     return(
-        <div className="bg-sec txt-det max-w-[1600px] place-items-center lg:mx-auto flex flex-col gap-12">
+        <>
+        <div className="bg-sec w-full">
+        <div className="txt-acc max-w-[1600px] place-items-center lg:mx-auto flex flex-col gap-12">
             {/* Bottoni di navigazione */}
-            <div className="sticky top-0  z-10 bg-sec w-full py-5 flex xl:gap-8 md:gap-8 gap-2 justify-center my-2 font-oddval xl:text-xl md:text-xl text-md">
+            <div className="sticky top-0  z-10 bg-sec w-full py-5 flex xl:gap-8 md:gap-8 gap-2 justify-center my-2 font-oddval xl:text-xl md:text-xl text-sm">
                 {categories.map(category => (
                     <button
                     key={category}
@@ -84,7 +97,7 @@ export default function Food({isCartVisible}){
 
             {isCartVisible && (
                 <div className={"z-10 fixed p-4 right-0 bg-det txt-sec xl:w-[500px] xl:h-[650px] md:w-[500px] md:h-[650px] w-[300px] h-[650px] overflow-y-scroll"}>
-                    <p className="text-2xl font-bold">Il tuo ordine: {getTotalAmount()}€</p>
+                    <p className="text-2xl font-oddval">Il tuo ordine: {getTotalAmount()}€</p>
                     {Object.keys(products).map(category => (
                         products[category].map(product => {
                             if (cartItems[category] && cartItems[category][product.id] !== 0) {
@@ -92,11 +105,11 @@ export default function Food({isCartVisible}){
                                     <div key={product.id} className="relative glass my-3 grid grid-cols-5 overflow-hidden rounded-lg">
                                         <img className="rounded-lg w-[100px] h-[100px] col-span-2 object-contain" src={product.image} alt="img" />
                                         <div>
-                                            <p className="text-xl font-bold">{cartItems[category][product.id]} X </p>
-                                            <p className="line-clamp-1 my-2 text-lg font-semibold">{product.name}</p>
-                                            <p className="font-semibold">{product.price}€</p>
+                                            <p className="text-xl font-archivio">{cartItems[category][product.id]} X </p>
+                                            <p className="line-clamp-1 my-2 text-lg font-archivio">{product.name}</p>
+                                            <p className="font-archivio">{product.price}€</p>
                                         </div>
-                                        <div className="absolute top-0 right-0 flex items-center gap-2">
+                                        <div className="absolute top-0 right-0 flex items-center font-archivio gap-3">
                                             <button onClick={() => setCartItems(cartItems=>({
                                                 ...cartItems, [category]:{
                                                     ...cartItems[category], [product.id]: Math.max((cartItems[category][product.id] || 0) -1, 0)
@@ -105,8 +118,8 @@ export default function Food({isCartVisible}){
                                             <span>{cartItems[category][product.id]}</span>
                                             <button onClick={()=>addToCart(category, product.id)} className="txt-sec bg-acc p-2 rounded-r-lg">+</button>
                                         </div>
-                                        <div className="absolute right-0 bottom-0 gap-2 font-bold">
-                                            <button onClick={() => removeFromCart(category, product.id)} className="txt-sec bg-acc p-2 rounded-lg">Rimuovi</button>
+                                        <div className="absolute right-0 bottom-0 gap-2">
+                                            <button onClick={() => removeFromCart(category, product.id)} className="txt-sec bg-acc p-2 rounded-lg font-archivio">Rimuovi</button>
                                         </div>
                                     </div>
                                 );
@@ -134,5 +147,7 @@ export default function Food({isCartVisible}){
             ))}
             </div> 
         </div>
+        </div>
+        </>
     );
 }

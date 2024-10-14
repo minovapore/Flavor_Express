@@ -3,7 +3,7 @@ import '../style/Checkout.css'
 import { products } from '../product';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../components/Footer';
-import Navbar from '../components/Navbar'
+import Navbar2 from '../components/Navbar2'
 
 export default function Checkout(){
     // Cerca di recuperare i dati del carrello dal localStorage
@@ -95,16 +95,16 @@ export default function Checkout(){
     }
     return(
         <>
-        <Navbar/>
+        <Navbar2/>
         <div className='bg-sec w-full h-screen'>
         <form onSubmit={handleSubmit}>
             <div className='flex justify-center'>
-                <h2 className='xl:text-4xl md:text-4xl text-3xl font-archivio txt-det my-5'>Completa il tuo ordine</h2>
+                <h2 className='xl:text-5xl md:text-5xl text-5xl text-center font-oddval txt-det txt-border my-5 '>Completa il tuo ordine</h2>
             </div>
-            <div className='bord-form xl:w-[1200px] md:w-[900px] xl:h-[500px] md:h-[500px] h-[500px] mx-auto rounded-xl overflow-y-scroll'>
+            <div className='border-form xl:w-[1200px] md:w-full xl:h-[500px] md:h-[500px] h-[500px] mx-auto rounded-xl overflow-y-scroll'>
                 <div className='grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1'>
                     <div className='mx-auto my-5'>
-                        <h2 className='txt-sec font-oddval text-2xl'>Riepilogo ordine</h2>
+                        <h2 className='txt-acc font-oddval text-2xl'>Riepilogo ordine</h2>
                         <div>
                             {Object.keys(cartItems).map(category => (
                                 products[category].map(product => {
@@ -112,7 +112,7 @@ export default function Checkout(){
                                     return (
                                         <div key={product.id} className="order-item w-[100px] h-[100px] flex items-center">
                                             <img src={product.image} alt={product.name} className="order-item-image object-contain" />
-                                            <div className="txt-sec font-oddval">
+                                            <div className="txt-sec font-archivio">
                                                 <p className='line-clamp-2 w-[100px]'>{cartItems[category][product.id]} X {product.name}</p>
                                                 <p>{(product.price * cartItems[category][product.id]).toFixed(2)}€</p>
                                             </div>
@@ -122,38 +122,39 @@ export default function Checkout(){
                                     return null;
                                 })
                             ))}
-                            <div className="total-bord flex justify-center">
-                                <p className='txt-sec font-oddval text-xl my-3'>Totale: {getTotalAmount()}€</p>
+                            <div className="total-bord flex justify-center items-center gap-2">
+                                <p className='txt-acc font-oddval text-2xl my-3'>Totale:</p>
+                                <p className='txt-sec font-archivio text-lg my-3'>{getTotalAmount()}€</p>
                             </div>
                         </div>
                     </div>
                     <div className='my-5 px-5'>
                         <div className='flex justify-center'>
-                            <h2 className='txt-sec font-oddval text-2xl'>Inserisci i dati</h2>
+                            <h2 className='txt-acc font-oddval text-2xl'>Inserisci i dati</h2>
                         </div>
                         
                             <div>
-                                <h3 className='txt-sec font-oddval text-xl'>Nome</h3>
+                                <h3 className='txt-acc font-oddval text-xl'>Nome</h3>
                                 <label className="input input-bordered flex items-center gap-2">
-                                    <input type="text" name='name' value={name} onChange={(e)=>setName(e.target.value)} className="grow font-oddval" placeholder="Nome" required/>
+                                    <input type="text" name='name' value={name} onChange={(e)=>setName(e.target.value)} className="grow font-archivio" placeholder="Nome" required/>
                                 </label>
                             </div>
                             <div className='my-5'>
-                                <h3 className='txt-sec font-oddval text-xl'>Città</h3>
+                                <h3 className='txt-acc font-oddval text-xl'>Città</h3>
                                 <label className="input input-bordered flex items-center gap-2">
-                                    <input type="text"  name='city' value={city} onChange={(e)=>setCity(e.target.value)} className="grow font-oddval" placeholder="Città" required/>
+                                    <input type="text"  name='city' value={city} onChange={(e)=>setCity(e.target.value)} className="grow font-archivio" placeholder="Città" required/>
                                 </label>
                             </div>
                             <div>
-                                <h3 className='txt-sec font-oddval text-xl'>Indirizzo</h3>
+                                <h3 className='txt-acc font-oddval text-xl'>Indirizzo</h3>
                                 <label className="input input-bordered flex items-center gap-2">
-                                    <input type="text"  name='address' value={address} onChange={(e)=>setAddress(e.target.value)} className="grow font-oddval" placeholder="Indirizzo" required/>
+                                    <input type="text"  name='address' value={address} onChange={(e)=>setAddress(e.target.value)} className="grow font-archivio" placeholder="Indirizzo" required/>
                                 </label>
                             </div>
                             <div className='my-5'>
-                                <h3 className='txt-sec font-oddval text-xl'>Cellulare</h3>
+                                <h3 className='txt-acc font-oddval text-xl'>Cellulare</h3>
                                 <label className="input input-bordered flex items-center gap-2">
-                                    <input type="number"  name='number' value={number} onChange={(e)=>setNumber(e.target.value)} className="grow font-oddval" placeholder="Cellulare" required/>
+                                    <input type="number"  name='number' value={number} onChange={(e)=>setNumber(e.target.value)} className="grow font-archivio" placeholder="Cellulare" required/>
                                 </label>
                             </div>
                             {errorAlert && (
@@ -176,7 +177,7 @@ export default function Checkout(){
                 </div>
             </div>
             <div className='my-10 flex justify-center'> 
-                <a href="/pagamento"><button type='submit' className="bg-acc w-40 h-10 rounded-lg font-oddval txt-det">Conferma ordine</button></a>
+                <a href="/pagamento"><button type='submit' className="bg-acc w-40 h-10 rounded-lg font-archivio txt-sec">Conferma ordine</button></a>
             </div>
         </form>
         </div>

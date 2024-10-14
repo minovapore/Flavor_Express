@@ -1,3 +1,5 @@
-.underline-nav{
-    border-bottom: 3px solid #ff3c00;
-}
+.navbar-bg{
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+} 

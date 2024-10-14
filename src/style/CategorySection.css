@@ -7,6 +7,6 @@
 }
 
 .btn-modal{
-    background-color: var(--sec-color) !important;
-    color: var(--det-color) !important;
+    background-color: var(--acc-color) !important;
+    color: var(--sec-color) !important;
 }

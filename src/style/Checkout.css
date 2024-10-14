@@ -1,4 +1,4 @@
-.bord-form{
+.border-form{
     border: 3px solid var(--acc-color);
     background-color: var(--det-color);
 }
@@ -6,3 +6,5 @@
 .total-bord{
     border-top: 2px solid var(--acc-color);
 }
+
+

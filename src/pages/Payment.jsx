@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../style/Payment.css';
-import Navbar from '../components/Navbar';
+import Navbar2 from '../components/Navbar2';
 import Footer from '../components/Footer';
 
 export default function Payment(){
@@ -48,55 +48,55 @@ export default function Payment(){
 
     return(
         <>
-        <Navbar/> 
+        <Navbar2/> 
         <div className='bg-sec w-full h-screen'>
             <form onSubmit={handleSubmit}>
                 <div className='flex justify-center'>
-                    <h2 className='xl:text-4xl md:text-4xl text-3xl font-archivio txt-det my-5'>Conferma ordine</h2>
+                    <h2 className='xl:text-5xl md:text-5xl text-5xl text-center font-oddval txt-det txt-border my-5 '>Conferma ordine</h2>
                 </div>
-                <div className='bord-form xl:w-[600px] md:w-[600px] xl:h-[525px] md:h-[550px] h-[670px] mx-auto rounded-xl px-5'>
+                <div className='bord-form xl:w-[600px] md:w-[600px] xl:h-[525px] md:h-[550px] h-[670px] mx-auto rounded-xl px-5 bg-det'>
                     <div className='xl:flex xl:justify-between md:flex md:justify-between my-3'>
                         <div>
-                            <h3 className='txt-sec font-oddval text-xl'>Nome</h3>
+                            <h3 className='txt-acc font-oddval text-xl'>Nome</h3>
                             <label className="input input-bordered flex items-center gap-2">
-                                <input type="text" name='name' value={name} onChange={(e)=> setName(e.target.value)} className="grow font-oddval" placeholder="Nome" required/>
+                                <input type="text" name='name' value={name} onChange={(e)=> setName(e.target.value)} className="grow font-archivio" placeholder="Nome" required/>
                             </label>
                         </div>
                         <div>
-                            <h3 className='txt-sec font-oddval text-xl'>Cognome</h3>
+                            <h3 className='txt-acc font-oddval text-xl'>Cognome</h3>
                             <label className="input input-bordered flex items-center gap-2">
-                                <input type="text" name='surname' value={surname} onChange={(e)=> setSurname(e.target.value)} className="grow font-oddval" placeholder="Cognome" required/>
+                                <input type="text" name='surname' value={surname} onChange={(e)=> setSurname(e.target.value)} className="grow font-archivio" placeholder="Cognome" required/>
                             </label>
                         </div>
                     </div>
                     <div>
-                        <h3 className='txt-sec font-oddval text-xl'>Numero carta</h3>
+                        <h3 className='txt-acc font-oddval text-xl'>Numero carta</h3>
                         <label className="input input-bordered flex items-center gap-2">
-                            <input type="text" name='card_number' value={cardNumber} onChange={(e)=> setCardNumber(e.target.value)} className="grow font-oddval" placeholder="Numero carta" required minLength={27}/>
+                            <input type="text" name='card_number' value={cardNumber} onChange={(e)=> setCardNumber(e.target.value)} className="grow font-archivio" placeholder="Numero carta" required minLength={27}/>
                         </label>
                     </div>
                     <div className='xl:flex xl:justify-between md:flex md:justify-between my-3'>
                         <div className='my-3'>
-                            <h3 className='txt-sec font-oddval text-xl'>Scadenza</h3>
+                            <h3 className='txt-acc font-oddval text-xl'>Scadenza</h3>
                             <label className="input input-bordered flex items-center gap-2">
-                                <input type="text" name='expiration' value={expiration} onChange={(e)=> setExpiration(e.target.value)} className="grow font-oddval" placeholder="mm/aa" required/>
+                                <input type="text" name='expiration' value={expiration} onChange={(e)=> setExpiration(e.target.value)} className="grow font-archivio" placeholder="mm/aa" required/>
                             </label>
                         </div>
-                        <div>
-                            <h3 className='txt-sec font-oddval text-xl'>CVV</h3>
+                        <div className='xl:my-3 md:my-3'>
+                            <h3 className='txt-acc font-oddval text-xl'>CVV</h3>
                             <label className="input input-bordered flex items-center gap-2">
-                                <input type="number" name='cvv' value={cvv} onChange={(e)=> setCvv(e.target.value)} className="grow font-oddval" placeholder="CVV" required minLength={3}/>
+                                <input type="number" name='cvv' value={cvv} onChange={(e)=> setCvv(e.target.value)} className="grow font-archivio" placeholder="CVV" required minLength={3}/>
                             </label>
                         </div>
                     </div>
                     <div>
-                        <h3 className='txt-sec font-oddval text-xl'>Email</h3>
+                        <h3 className='txt-acc font-oddval text-xl'>Email</h3>
                         <label className="input input-bordered flex items-center gap-2">
-                            <input type="email" name='email' value={email} onChange={(e)=> setEmail(e.target.value)} className="grow font-oddval" placeholder="Email" required/>
+                            <input type="email" name='email' value={email} onChange={(e)=> setEmail(e.target.value)} className="grow font-archivio" placeholder="Email" required/>
                         </label>
                     </div>
                     <div className='flex justify-center my-5'>
-                        <button type='submit' className='bg-sec w-40 h-10 rounded-lg font-oddval txt-det'>Invia ordine</button>
+                        <button type='submit' className='bg-acc w-40 h-10 rounded-lg font-archivio txt-sec'>Invia ordine</button>
                     </div>
                     <div className='flex justify-center'>
                 {successAlert && (
@@ -135,7 +135,7 @@ export default function Payment(){
                 </div>
             </form>
             <div className='flex justify-center my-5'>
-                <a href="/"><button className='bg-acc w-40 h-10 rounded-lg font-oddval txt-det'>Torna alla home</button></a>
+                <a href="/"><button className='bg-acc w-40 h-10 rounded-lg font-oddval txt-sec'>Torna alla home</button></a>
             </div>
         </div> 
         <Footer/>

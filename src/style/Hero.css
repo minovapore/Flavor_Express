@@ -2,6 +2,7 @@
     background-image: url(../assets/img/hero.png);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 @media screen and (min-width:768px){
@@ -18,6 +19,16 @@
         background-position: cover;
         background-position: center;
     }
+}
+
+.bg-black-banner{
+  background-color: black;
+  opacity: 50%;
+}
+
+.text-banner{
+  opacity: 100%;
+  z-index: 999999;
 }
 
 .scroll-container {
@@ -76,18 +87,18 @@
 }
 
   .txt-border{
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: var(--sec-color);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--acc-color);
   }
 
   .txt-border2{
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: var(--det-color);
   }
 
   .txt-border3{
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: var(--det-color);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--sec-color);
   }
 
   .btn-order{
@@ -98,7 +109,7 @@
 
   .btn-app{
     border: 2px solid var(--acc-color);
-    /* background-color: var(--acc-color) */
+    /* background-color: var(--sec-color) */
   }
 
   .border-card{
@@ -183,7 +194,7 @@
     color: transparent;
     -webkit-text-stroke: 2px var(--det-color);
     background-image: url(../assets/img/back.png);
-    -webkit-background-clip: text;
+    background-clip: text;
     background-position: 0 0;
     animation: back 20s linear infinite;
   }
@@ -192,4 +203,51 @@
     100%{
       background-position: 2000px 0;
     }
+  }
+  
+  .text-shadow-custom{
+    color: var(--det-color);
+    text-shadow: 2px 1px var(--sec-color);
+  }
+
+  .txt-scroll{
+    color: var(--det-color);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--sec-color);
+  }
+  
+  /* STEPPER ANIMATION */
+  @keyframes appear5 {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .stepper-animation{
+    animation: appear5 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  /* CAROUSEL ANIMATION */
+  @keyframes appear6 {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .carousel-animation{
+    animation: appear6 linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
   }

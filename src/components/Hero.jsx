@@ -1,8 +1,6 @@
 import '../style/Hero.css';
 import '../style/Global.css';
 import InfiniteScroll from './InfiniteScroll'
-import burger from '../assets/img/burger.png';
-import pizza from '../assets/img/pizza.png'
 import Carousel from './Carousel';
 import mockup from '../assets/img/mockup.png'
 import { FaApple } from "react-icons/fa";
@@ -10,32 +8,37 @@ import { FaGooglePlay } from "react-icons/fa";
 import rider from '../assets/img/rider.png';
 import work from '../assets/img/work.png';
 import chef from '../assets/img/chef.png';
-import hero from '../assets/img/hero.png';
 
 
 export default function Hero(){
     return(
         <>
-        <div className='bg-det w-full h-auto'>
-        <div className="bg-sec xl:w-11/12 md:w-11/12 mx-auto xl:h-[600px] md:h-[500px] h-[400px] text-white grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1">
-        <div className='flex items-center justify-center'>
+        {/* <div className='bg-det w-full h-auto'> */}
+         {/* <div className="bg-sec xl:w-11/12 md:w-11/12 mx-auto xl:h-[600px] md:h-[500px] h-[400px] text-white grid xl:grid-cols-2 md:grid-cols-2 grid-cols-1">  */}
+        {/* <div className='flex items-center justify-center'>
             <div>
                 <h2 className='xl:text-6xl md:text-6xl text-4xl text-center font-archivio txt-det txt-border3 txt-sec'>FLAVOR EXPRESS</h2>
                 <h2 className='xl:text-6xl md:text-6xl text-4xl text-center font-archivio my-5 title-animation'>FLAVOR EXPRESS</h2>
                 <h2 className='xl:text-6xl md:text-6xl text-4xl text-center font-archivio txt-det txt-border3 txt-sec'>FLAVOR EXPRESS</h2>
             </div>
-        </div>
-        <div className='flex items-center justify-center'>
+        </div> */}
+        {/* <div className='flex items-center justify-center'>
            <img src={hero} alt=""/>
-        </div>
+        </div> 
+        </div> */}
+        <div className='w-11/12 mx-auto my-5 bg-banner h-screen'>
+            <div className='w-full mx-auto bg-black opacity-50 h-screen'>
+                <div className='flex justify-center items-center h-full'>
+                </div>
+            </div>
         </div>
         <div className='bg-det relative h-[650px]'>
             <InfiniteScroll/>
             <div className='relative w-full h-[600px] about-us-animation' id='chi-siamo'>
-                <div className='absolute inset-0 z-0 animation'>
+                {/* <div className='absolute inset-0 z-0 animation'>
                     <img src={burger} alt="" className='object-cover xl:my-0 md:my-20 xl:w-[250px] md:w-[250px] w-[150px]'/>
                     <img src={pizza} alt="" className='object-cover ml-auto xl:-my-32 md:-my-64 my-48 rotate-12 me-9 xl:w-[350px] md:w-[300px] w-[150px]'/>
-                </div>
+                </div> */}
                 <h2 className='absolute inset-0 flex justify-center xl:my-14 md:my-14 my-14 xl:text-6xl md:text-6xl text-5xl font-archivio z-10 txt-border txt-det'>CHI SIAMO</h2>
                 <p className='absolute inset-0 flex justify-center items-center xl:mt-0 md:mt-24 mt-0 xl:text-4xl md:text-4xl text-2xl xl:w-9/12 md:w-9/12 text-center font-oddval txt-sec mx-auto z-10'>Flavor Express è un servizio di food delivery che offre piatti freschi e gustosi, con consegne rapide a domicilio, combinando cucina locale e internazionale per ogni esigenza.  Che tu voglia una cena gourmet o un pasto veloce, Flavor Express garantisce un'esperienza culinaria comoda e gustosa, senza rinunciare alla comodità di mangiare a casa.</p>
             </div>
@@ -90,7 +93,7 @@ export default function Hero(){
                 </div>
             </div>
         </div>
-        </div>
+        {/* </div>  */}
         </>
     );
 }

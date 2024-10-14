@@ -1,4 +1,4 @@
-import logo from '../assets/img/logo.png';
+import logo from '../assets/img/logo2.png';
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa";
@@ -6,10 +6,10 @@ import '../style/Footer.css'
 
 export default function Footer(){
     return(
-        <footer className="w-auto footer footer-center bg-det p-10 txt-sec border-top">
+        <footer className="w-full footer footer-center bg-det p-10 txt-sec border-top">
             <aside>
                 <img src={logo} alt="" />
-                <p>Copyright © {new Date().getFullYear()} - Flavor Express</p>
+                <p className='txt-acc'>Copyright © {new Date().getFullYear()} - Flavor Express</p>
             </aside>
             <nav>
                 <div className="grid grid-flow-col gap-4">
